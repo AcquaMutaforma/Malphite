@@ -1,9 +1,11 @@
+package contenitori;
+
 public class APIdiAppoggio {
 
+    Object api; //TODO
 
-
-    String traduciAudio(ElementoAudio audio){
+    public String traduciAudio(ElementoAudio audio){
         //TODO
-        return null;
+        return "ciao";
     }
 }

@@ -1,3 +1,5 @@
+package contenitori;
+
 import javax.sound.sampled.AudioFormat;
 
 public class ElementoAudio {

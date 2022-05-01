@@ -1,3 +1,5 @@
+package contenitori;
+
 public class ElementoTradotto {
 
     ElementoAudio elementoAudio;

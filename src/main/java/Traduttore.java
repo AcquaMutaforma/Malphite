@@ -1,17 +1,22 @@
-import javax.sound.sampled.AudioFormat;
+import contenitori.APIdiAppoggio;
+import contenitori.ElementoAudio;
+import contenitori.ElementoTradotto;
 
 /** Classe che prende degli elementi*/
 public class Traduttore implements IntTraduttre{
 
-    AudioFormat elementoAudio;
-    String testo;
+    APIdiAppoggio api;
 
-    public String audioToString(AudioFormat a){
-        return null; //TODO
+    public Traduttore(APIdiAppoggio api) {
+        this.api = api;
     }
 
-    public AudioFormat stringToAudio(String s){
-        //TODO
-        return null;
+    public ElementoTradotto audioToString(ElementoAudio audio){
+        return new ElementoTradotto(audio, this.api.traduciAudio(audio));
     }
+
+    public void setAPIdiAppoggio(APIdiAppoggio api) {
+        this.api = api;
+    }
+
 }

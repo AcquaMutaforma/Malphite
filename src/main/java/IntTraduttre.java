@@ -1,8 +1,10 @@
-import javax.sound.sampled.AudioFormat;
+import contenitori.APIdiAppoggio;
+import contenitori.ElementoAudio;
+import contenitori.ElementoTradotto;
 
 public interface IntTraduttre {
 
-    String audioToString(AudioFormat a);
-    AudioFormat stringToAudio(String s);
+    ElementoTradotto audioToString(ElementoAudio audio);
+    void setAPIdiAppoggio(APIdiAppoggio api);
 
 }

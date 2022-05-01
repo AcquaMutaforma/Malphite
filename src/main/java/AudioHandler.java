@@ -1,14 +1,20 @@
-import javax.sound.sampled.AudioFormat;
+import contenitori.ElementoAudio;
 
 /** Classe per gestione INPUT, crea oggetto audio da tradurre */
-public class Ascoltatore {
+public class AudioHandler {
 
-    int sec = 10;   //secondi in cui ascolta un comando
-    AudioFormat elementoAudio = null; //TODO
+    IDManager idManager;
+    int sec;   //secondi in cui ascolta un comando, quindi la grandezza di un blocco da inviare
 
-    public AudioFormat getComando(){
+    public AudioHandler(IDManager idManager, int secondiDurataAudio){
+        this.idManager = idManager;
+        this.sec = secondiDurataAudio;
+    }
+
+    public ElementoAudio getComando(){
+        ElementoAudio toreturn = null;
         //TODO
-        return null;
+        return toreturn;
     }
 
 }
