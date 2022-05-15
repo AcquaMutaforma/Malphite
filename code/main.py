@@ -1,17 +1,12 @@
-# This is a sample Python script.
+""" Main del sistema, inizializza gli oggetti necessari al funzionamento """
 
-# Press Maiusc+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import APIdiAppoggio
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# print(f'Hi, {name}')
+import servizio_AssemblyAI
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    APIdiAppoggio.traduci_audio()
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    filename = "C:\\Users\\Aley\\Desktop\\Registrazione.m4a"
+    api = servizio_AssemblyAI.servizioAai()
+    api.traduzione(filename)

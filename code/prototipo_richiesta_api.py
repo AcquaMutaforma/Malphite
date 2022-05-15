@@ -14,21 +14,19 @@ def read_file(filename, chunk_size=5242880):
 
 
 def traduci_audio():
-    header_base = {'authorization': token}
-    risposta_json = requests.post('https://api.assemblyai.com/v2/upload', headers=header_base,
+    headers = {'authorization': token,
+                   "content-type": "application/json"}
+    risposta_json = requests.post('https://api.assemblyai.com/v2/upload', headers=headers,
                                   data=read_file(filename))
 
     print("--------- risposta 1---------")
     print(risposta_json.json())
     print("--------- fine risposta 1---------")
-
+    # todo sono arrivato qua -----------------------------------------------
     url_traduzione = "https://api.assemblyai.com/v2/transcript"
     audio_url_json = {"audio_url": risposta_json.json()['upload_url'],
                       "language_code": "it"}
-    headers = {
-        "authorization": token,
-        "content-type": "application/json"
-    }
+
     response = requests.post(url_traduzione, json=audio_url_json, headers=headers)
     print("--------- risposta 2---------")
     print(response.json())
