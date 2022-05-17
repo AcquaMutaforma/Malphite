@@ -3,11 +3,13 @@ Responsabilita' :
 Catturare audio in input
 Definire durata dell'audio"""
 
-class audioHandler:
 
-    def __init__(self, durata_audio): # il traduttore va dato a lui o ci pensa il main ?
-        self.durata = durata_audio
-
-
-    def getAudio(self):
-        pass # todo
+def get_audio(secondi):
+    if secondi is not None:
+        tempo = secondi
+    else:
+        tempo = 5
+    #  ascolta l'audio per 5 secondi
+    #  crea un file audio in una cartella X
+    #  return percorso_file
+    
