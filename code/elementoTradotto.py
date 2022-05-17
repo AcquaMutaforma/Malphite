@@ -6,6 +6,7 @@ class ElementoTradotto:
     def __init__(self, audio, trad):
         self.audio = audio
         self.traduzione = trad
+        print(f"[EleTradotto] new - audio = {self.audio} - - traduzione = {self.traduzione}")
         pass
 
     def get_audio(self):

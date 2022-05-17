@@ -10,6 +10,7 @@ import traduttore
 if __name__ == '__main__':
     filename = "C:\\Users\\Aley\\Desktop\\Registrazione.m4a"
     # Il traduttore viene inizializzato qua, cosi' quando si vuole modificare il codice basta cambiare qui
-    traduttore = traduttore.Traduttore(api=servizio_AssemblyAI.ServizioAai())
+    traduttore = traduttore.Traduttore(api=servizio_AssemblyAI)
     testo = traduttore.traduci(filename)
-    print(f"Testo tradotto = {testo}")
+    print(f"Testo tradotto = {testo.traduzione}")
+    print('-- all done --')
