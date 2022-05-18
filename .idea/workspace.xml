@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43ac9911-f9ba-4301-bf93-5eb8125bbcaf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MALP-2.vpp.bak_001d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/elementoTradotto.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/elementoTradotto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/servizio_AssemblyAI.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/servizio_AssemblyAI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/traduttore.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/traduttore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/fileHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/fileHandler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
