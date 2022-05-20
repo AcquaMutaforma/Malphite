@@ -42,15 +42,17 @@ def __get_traduzione(id_audio):
         return None
 
 
-def traduzione(audio_path):  # todo mettere un boolean per abilitare i print, aiuta con debug
+# todo mettere un boolean per abilitare i print, aiuta con debug
+def traduzione(audio_path):
+    print(f"[AAI] - upload file={audio_path}")
     id_file = __upload(audio_path)
-    print(f"[AAI] audio path = {audio_path} - - ID file = {id_file}")
+    print(f"[AAI] - path= {audio_path} - - ID file= {id_file}")
     nav = 1
     while 1:
         richiesta = __get_traduzione(id_file)
-        print(f"[AAI] numero richiesta = {nav} - - richiesta = {richiesta}")
+        print(f"[AAI] - richiesta_traduzione= {nav} - - testo= {richiesta}")
         if richiesta is not None:
             break
         nav += 1
-    print(f"[AAI] testo = {richiesta}")
+    print(f"[AAI] - risposta= {richiesta}")
     return richiesta

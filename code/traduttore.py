@@ -10,13 +10,14 @@ class Traduttore:
 
     def __init__(self, api):
         self.api = api
-        print("[Traduttore] Pronto")
+        print("[Traduttore] - Pronto")
         pass
 
     def traduci(self, audio):
+        print("[Traduttore] - avvio API")
         testo = self.api.traduzione(audio)
-        print(f"[Traduttore] Testo = {testo}")
+        print(f"[Traduttore] - traduzione= {testo}")
         if testo is not None:
             return elementoTradotto.ElementoTradotto(audio=audio, trad=testo)
         else:
-            print("[Traduttore]: traduzione non riuscita, testo = None")
+            print("[Traduttore] - traduzione non riuscita, testo = None")

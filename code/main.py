@@ -1,16 +1,21 @@
 """ Main del sistema, inizializza gli oggetti necessari al funzionamento """
 
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-# print(f'Hi, {name}')
 import servizio_AssemblyAI
-import traduttore
+import traduttore as trad
+import registratore
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    filename = "C:\\Users\\Aley\\Desktop\\Registrazione.m4a"
-    # Il traduttore viene inizializzato qua, cosi' quando si vuole modificare il codice basta cambiare qui
-    traduttore = traduttore.Traduttore(api=servizio_AssemblyAI)
-    testo = traduttore.traduci(filename)
-    print(f"Testo tradotto = {testo.traduzione}")
-    print('-- all done --')
+
+    traduttore = trad.Traduttore(api=servizio_AssemblyAI)
+
+# ------ Non avevo altre idee, quindi per ora si avvia cosi' ------------------------
+    print("Scrivi 'start' per iniziare, altrimenti chiudo")
+    comando = input()
+    if 'start' in comando:
+        registrazione = registratore.get_audio(3.0)
+        elem_tradotto = traduttore.traduci(registrazione)
+    else:
+        print("Ok - i'm done")
+    exit(0)
