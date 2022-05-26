@@ -1,14 +1,14 @@
 """ Main del sistema, inizializza gli oggetti necessari al funzionamento """
 
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import servizio_AssemblyAI
+import servizio_AssemblyAI as myapi
 import traduttore as trad
 import registratore
 
 
 if __name__ == '__main__':
 
-    traduttore = trad.Traduttore(api=servizio_AssemblyAI)
+    traduttore = trad.Traduttore(api=myapi)
 
 # ------ Non avevo altre idee, quindi per ora si avvia cosi' ------------------------
     print("Scrivi 'start' per iniziare, altrimenti chiudo")

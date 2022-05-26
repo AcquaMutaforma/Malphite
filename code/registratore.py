@@ -43,6 +43,3 @@ def get_audio(secondi):
 
 def __audio_to_file(recording):
     return fileHandler.crea_file_richiesta(frequency, recording)
-
-
-#  get_audio(None)

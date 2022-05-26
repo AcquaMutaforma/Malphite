@@ -2,7 +2,7 @@ import random
 from scipy.io.wavfile import write
 
 cartella_comando = "audio_richieste/"
-
+#  cartella_risposte = "risposte_registrate/"
 
 def crea_file_richiesta(freq, recording):
     """Questo metodo scrive la registrazione nella cartella_comando, se e' gia' presente un file
