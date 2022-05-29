@@ -3,7 +3,7 @@
 
 class ElementoTradotto:
 
-    def __init__(self, audio, trad):
+    def __init__(self, audio: str, trad: str):
         self.audio = audio
         self.traduzione = trad
         print(f"[EleTradotto] - new - - audio= {self.audio} - - traduzione= {self.traduzione}")

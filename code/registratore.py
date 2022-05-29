@@ -5,7 +5,7 @@ Definire durata dell'audio
 """
 
 import sounddevice as sd
-import fileHandler
+import file_handler
 
 """
 For repeated use you can set defaults using default:

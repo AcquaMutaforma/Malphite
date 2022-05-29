@@ -13,7 +13,11 @@ class Traduttore:
         print("[Traduttore] - Pronto")
         pass
 
-    def traduci(self, audio):
+    def traduci(self, audio: str):
+        """
+        :param audio: path del file audio
+        :return:
+        """
         print("[Traduttore] - avvio API")
         testo = self.api.traduzione(audio)
         print(f"[Traduttore] - traduzione= {testo}")
