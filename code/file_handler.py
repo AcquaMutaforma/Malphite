@@ -15,6 +15,7 @@ def crea_file_richiesta(freq, recording):
     file_audio = cartella_comando + "richiesta" + str(random.randrange(0, 20)) + ".wav"
     try:
         write(file_audio, freq, recording)
+        print("[File_H] - File audio di richiesta creato correttamente")
     except PermissionError:
         print(f"[File_H] - Errore permessi scrittura file in ^ {cartella_comando} ^")
         return None
@@ -30,29 +31,30 @@ def crea_file_richiesta(freq, recording):
 def elimina_audio(filename: str):
     """Utilizzato per cancellare le richieste una volta completata la gestione e per la rimozione
     di file audio delle risposte se necessario"""
-    if os.path.exists(filename):
-        try:
-            os.remove(filename)
-            print("[File_H] - Audio correttamente rimosso")
-        except PermissionError:
-            print(f"[File_H] - Errore permessi rimozione file audio ^ {filename} ^")
-        except Exception:
-            print("[File_H] - Errore indefinito - rimozione audio fallita :(")
-    else:
+    try:
+        os.remove(filename)
+        print("[File_H] - Audio correttamente rimosso")
+    except FileNotFoundError:
         print(f"[File_H] - Audio da rimuovere non trovato ^{filename}")
+    except PermissionError:
+        print(f"[File_H] - Errore permessi rimozione file audio ^ {filename} ^")
+    except Exception:
+        print("[File_H] - Errore indefinito - rimozione audio fallita :(")
 
 
 def get_mappa_decisore():
     if os.path.exists(info_risposte):
-        f = open(info_risposte, 'r')
+        '''f = open(info_risposte, 'r')
         toreturn = f.read()
         f.close()
-        return toreturn
+        print(f"[File_H] - File {info_risposte} inviato come stringa")'''
+        return open(info_risposte, 'r')
     else:
         f = open(info_risposte, 'x')
         f.close()
+        print(f"[File_H] - File {info_risposte} non trovato, ne creo uno")
         return ''
-        # tanto se il file e' vuoto, al decisore arriva comunque un '' quindi evito di aprire il file
+        # tanto se il file e' vuoto, al decisore arriva comunque un '' invece di aprire il file vuoto
 
 
 def update_mappa_decisore(str_oggetti_json: str):
@@ -60,11 +62,11 @@ def update_mappa_decisore(str_oggetti_json: str):
         f = open(info_risposte, 'w')
         f.write(str_oggetti_json)
         f.close()
+        print("[File_H] - Mappa risposte aggiornata")
     except PermissionError:
         print("[File_H] - Errore permessi per aggiornamento mappa")
     except Exception:
         print("[File_H] - Errore indefinito per aggiornamento mappa")
-    print("[File_H] - Mappa risposte aggiornata")
 
 
 def apri_audio_risposta(nome_file: str):
@@ -81,11 +83,12 @@ def apri_audio_risposta(nome_file: str):
 
 
 def add_audio_risposta(nome_file: str, registrazione: str):
-    """Inserisce una nuova registrazione nella cartella di risposte registrate dal custode"""
+    """SPOSTA una nuova registrazione nella cartella di risposte registrate dal custode"""
     try:
         destinazione = cartella_risposte + "/" + nome_file
         sorgente = os.fspath(registrazione)
         os.replace(sorgente, destinazione)
+        print("[File_H] - Registrazione risposta aggiunta correttamente")
     except PermissionError:
         print("[File_H] - Errore permessi per aggiungere/modificare file audio")
     except FileNotFoundError:

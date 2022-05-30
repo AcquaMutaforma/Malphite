@@ -2,10 +2,10 @@ import elementoTradotto
 
 
 class Traduttore:
-    """ Classe che utilizza un oggetto API per tradurre un audio in testo
+    f""" Classe che utilizza un oggetto API per tradurre un audio in testo
     Responsabilita' :
-    Viene richiamato da main o audioHandler   #todo: decidere chi
-    Utilizza un oggetto apiDiAppoggio per creare un oggetto elementoTradotto
+    Viene richiamato dal main
+    Utilizza un oggetto apiDiAppoggio per creare un oggetto {elementoTradotto}
     """
 
     def __init__(self, api):
@@ -14,10 +14,8 @@ class Traduttore:
         pass
 
     def traduci(self, audio: str):
-        """
-        :param audio: path del file audio
-        :return:
-        """
+        """ Metodo che attraverso l'oggetto api che contiene, traduce un audio in testo
+        :param audio: path del file audio """
         print("[Traduttore] - avvio API")
         testo = self.api.traduzione(audio)
         print(f"[Traduttore] - traduzione= {testo}")

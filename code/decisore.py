@@ -17,7 +17,7 @@ class Decisore:
         self.esecutore = esec
         self.load_mappa()
 
-    def valuta_comando(self, elem_trad: elementoTradotto):
+    def valuta_comando(self, elem_trad: elementoTradotto.ElementoTradotto):
         f"""
     - controllo se e' presente una traduzione
     - con filtra_richiesta(elem_trad.traduzione) filtro la traduzione di {elem_trad} e ritorno una lista
@@ -28,20 +28,25 @@ class Decisore:
     - resetta mappa valutazione. 
     - infine, se non viene inviato al mess_handler elimina il file audio.
         """
+        a = elem_trad.audio
+        print(f"[Decisore] - Ho valutato il comando del file {a}")
+        file_handler.elimina_audio(a)
         pass  # todo
 
     def load_mappa(self):
         f"""Carica la mappa da un file, recuperato tramite fileHandler.
         Inizializza la {self.mappa_valutazione} con gli oggetti risposta, mentre inizializza
         la {self.mappa_logica} con le parole chiave relative alle risposte."""
-        lista = json.load(file_handler.get_mappa_decisore())
+        f = file_handler.get_mappa_decisore()
+        lista = json.load(f)  # e' tipo <list> di oggetti <dict>
         for i in lista:
-            # todo: aggiungere controlli
-            risp = risposta.Risposta(i['id'], i['nome'], i['registrazione'], i['keywords'])
+            risp = risposta.Risposta(i)
             for k in risp.keywords:
-                self.mappa_logica[str(k).lower()] = str(risp.id_risp)
+                if k is None:
+                    continue
+                self.mappa_logica[str(k).lower()] = str(risp.idr)
                 # se e' gia presente una keyword? modifichiamo il valore (id) in una lista di id (?)idk
-            self.mappa_valutazione[risp.id_risp] = 0
+            self.mappa_valutazione[risp.idr] = 0
 
     def add_risposta(self):
         """Aggiunge una nuova risposta alla tabella, e richiede a fileHandler
@@ -57,8 +62,7 @@ class Decisore:
         for x in self.mappa_valutazione.keys():
             self.mappa_valutazione[x] = 0
 
-
-def filtra_richiesta(string: str):
-    """Metodo che sottrae le parole piu' corte di 3 caratteri e ritorna una lista
-            con le parole presenti nel comando ricevuto"""
-    pass  # todo
+    def __filtra_richiesta(string: str):
+        """Metodo che sottrae le parole piu' corte di 3 caratteri e ritorna una lista
+                con le parole presenti nel comando ricevuto"""
+        pass  # todo
