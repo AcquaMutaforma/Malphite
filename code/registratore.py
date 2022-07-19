@@ -16,7 +16,7 @@ After that, you can drop the additional arguments:
 myrecording = sd.rec(int(duration * frequency))
 
 """
-frequency = 44400  # Sampling frequency
+frequency = 44400  # Sampling frequency = frequenza campionamento
 sd.default.samplerate = frequency
 sd.default.channels = 2
 
@@ -42,4 +42,5 @@ def get_audio(secondi):
 
 
 def __audio_to_file(recording):
+    '''Trasforma una variabile audio in un file in memoria'''
     return file_handler.crea_file_richiesta(frequency, recording)

@@ -9,7 +9,7 @@ si potrebbe creare non all'inizializzazione (__init__) ma quando viene richiesto
 cosi se non serve proprio, non viene creato -A-"""
 
 
-class Esecutore:  # utilizzando la classe non dobbiamo scrivere "import" quindi si modifica dal main
+class Esecutore:  # utilizzando la classe non dobbiamo scrivere "import" quindi si modifica + facilmente dal main
 
     def __init__(self, messaggistica, output):
         self.mess_h = messaggistica

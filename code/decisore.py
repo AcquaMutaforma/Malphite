@@ -17,6 +17,7 @@ class Decisore:
         self.esecutore = esec
         self.load_mappa()
 
+
     def valuta_comando(self, elem_trad: elementoTradotto.ElementoTradotto):
         f"""
     - controllo se e' presente una traduzione
@@ -28,9 +29,20 @@ class Decisore:
     - resetta mappa valutazione. 
     - infine, se non viene inviato al mess_handler elimina il file audio.
         """
+        if(elem_trad.get_traduzione() == None):
+            pass # todo: puo accadere di non avere traduzione? allora cosa faccio?
+        dizionario_keywords = self.__filtra_richiesta(elem_trad.get_traduzione())
+        for x in dizionario_keywords:
+            id_risp = self.mappa_valutazione.get(x)
+            tmp = self.mappa_valutazione.get(id_risp)
+            self.mappa_valutazione.update(id_risp, tmp+1)
+            # TODO correggere queste du cose, è troppo caldo
+
+        # chiusura processo
         a = elem_trad.audio
         print(f"[Decisore] - Ho valutato il comando del file {a}")
         file_handler.elimina_audio(a)
+        self.__reset_mappa_valutazione()
         pass  # todo
 
     def load_mappa(self):
@@ -58,11 +70,11 @@ class Decisore:
             di modificare il file della mappa."""
         pass  # todo
 
-    def reset_mappa_valutazione(self):
+    def __reset_mappa_valutazione(self):
         for x in self.mappa_valutazione.keys():
             self.mappa_valutazione[x] = 0
 
-    def __filtra_richiesta(string: str):
+    def __filtra_richiesta(self, tmp_s: str):
         """Metodo che sottrae le parole piu' corte di 3 caratteri e ritorna una lista
                 con le parole presenti nel comando ricevuto"""
-        pass  # todo
+        return {}

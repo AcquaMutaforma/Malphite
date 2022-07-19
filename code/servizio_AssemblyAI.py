@@ -42,7 +42,6 @@ def __get_traduzione(id_audio):
         return None
 
 
-# todo mettere un boolean per abilitare i print, aiuta con debug
 def traduzione(audio_path):
     print(f"[AAI] - upload file={audio_path}")
     id_file = __upload(audio_path)

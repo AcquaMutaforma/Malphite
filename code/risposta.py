@@ -4,11 +4,11 @@ import json
 
 class Risposta:
 
-    def __init__(self, diz: dict):
-        self.idr = diz.get("idr")
-        self.nome = diz.get("nome")
-        self.registrazione = diz.get("registrazione")
-        self.keywords = diz.get("keywords")
+    def __init__(self, risposta_dizionario: dict):
+        self.idr = risposta_dizionario.get("idr")
+        self.nome = risposta_dizionario.get("nome")
+        self.registrazione = risposta_dizionario.get("registrazione")
+        self.keywords = risposta_dizionario.get("keywords")
 
     def getjson(self):
         """Ritorna l'oggetto in formato json. Utilizzato per scrivere e leggere
