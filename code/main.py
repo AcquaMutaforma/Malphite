@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     # ------ Avvio oggetti necessari ------
     traduttore = trad.Traduttore(api=myapi)
-    mess_h = message_handler.TelegramMH()
+    mess_h = message_handler.TeleBot()
     esec = esecutore.Esecutore(messaggistica=mess_h, output=output_handler)
     decisore = decisore.Decisore(esec)
 

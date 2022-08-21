@@ -5,6 +5,7 @@ import json
 class Risposta:
 
     def __init__(self, risposta_dizionario: dict):
+        #  todo: aggiungere i controlli
         self.idr = risposta_dizionario.get("idr")
         self.nome = risposta_dizionario.get("nome")
         self.registrazione = risposta_dizionario.get("registrazione")

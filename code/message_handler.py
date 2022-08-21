@@ -1,8 +1,7 @@
-import file_handler
 import elementoTradotto
 
 
-class TelegramMH:
+class TeleBot:
 
     def __init__(self):
         pass

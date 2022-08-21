@@ -43,6 +43,7 @@ def elimina_audio(filename: str):
 
 
 def get_mappa_decisore():
+    """Recupera il file in memoria la mapp"""
     if os.path.exists(info_risposte):
         '''f = open(info_risposte, 'r')
         toreturn = f.read()
@@ -57,10 +58,12 @@ def get_mappa_decisore():
         # tanto se il file e' vuoto, al decisore arriva comunque un '' invece di aprire il file vuoto
 
 
-def update_mappa_decisore(str_oggetti_json: str):
+def update_file_mappa(lista_risp_stringa):
+    """Aggiorna il file con la mappa json con quello attivo in memoria"""
     try:
         f = open(info_risposte, 'w')
-        f.write(str_oggetti_json)
+        for x in lista_risp_stringa:
+            f.write(x)
         f.close()
         print("[File_H] - Mappa risposte aggiornata")
     except PermissionError:
@@ -82,10 +85,10 @@ def apri_audio_risposta(nome_file: str):
     return None
 
 
-def add_audio_risposta(nome_file: str, registrazione: str):
+def add_audio_risposta(nuovo_nome: str, registrazione: str):
     """SPOSTA una nuova registrazione nella cartella di risposte registrate dal custode"""
     try:
-        destinazione = cartella_risposte + "/" + nome_file
+        destinazione = cartella_risposte + "/" + nuovo_nome
         sorgente = os.fspath(registrazione)
         os.replace(sorgente, destinazione)
         print("[File_H] - Registrazione risposta aggiunta correttamente")
@@ -98,5 +101,5 @@ def add_audio_risposta(nome_file: str, registrazione: str):
     # todo: controllare che funzioni davvero >.<
 
 
-def update_audio_risposta(nome_file: str, registrazione: str):
+def modifica_audio_risposta(nome_file: str, registrazione: str):
     add_audio_risposta(nome_file, registrazione)

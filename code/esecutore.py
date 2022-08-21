@@ -3,24 +3,20 @@ uno per l'invio delle richieste (audio e testo) tramite messaggistica
 e l'altro per la riproduzione di una risposta pre-registrata in formato audio"""
 import elementoTradotto
 
-"""Nota
-L'oggetto message_handler che contiene i dati per l'invio di telegram andrebbe tenuto qua,
-si potrebbe creare non all'inizializzazione (__init__) ma quando viene richiesto la prima volta,
-cosi se non serve proprio, non viene creato -A-"""
+'''NOTA: questo probabilmente non deve essere una classe, per ora lo lascio cosi'''
 
 
-class Esecutore:  # utilizzando la classe non dobbiamo scrivere "import" quindi si modifica + facilmente dal main
+class Esecutore:  # utilizzando la classe non dobbiamo scrivere "import"--> si modifica + facilmente dal main
 
     def __init__(self, messaggistica, output):
         self.mess_h = messaggistica
         self.out_h = output
 
-    def richiesta_non_gestita(self, elem_tradotto: elementoTradotto):
+    def richiesta_non_gestita(self, elem_trad: elementoTradotto.ElementoTradotto):
         """Riceve un elem_trad che viene elaborato e inviato tramite mess_h"""
-        self.mess_h.invia_richiesta(elem_tradotto)
+        self.mess_h.invia_richiesta(elem_trad)
 
-    def esegui_operazione(self, filename_risposta: str):
+    def esegui_operazione(self, registrazione: str ):
         """Da elemento tradotto prendo la traduzione, poi con il filename_risposta l'output handler
         si occupa di recuperare la registrazione da riprodurre."""
-        self.out_h.riproduci_audio(filename_risposta)
-
+        self.out_h.riproduci_audio(registrazione)
