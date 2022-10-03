@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Band Listing</title>
+  </head>
+  <body>
+    <h1>All Bands</h1>
+    <ul>
+    {% for setting in settings %}
+      <li>
+        <h2>{{ setting.Alarm }}</h2>
+        <h2>{{ setting.id}}</h2>
+      </li>
+    {% endfor %}
+
+    </ul>
+    <form action={{ url }} method="PUT">
+      <label for="Alarm">Alarm: </label>
+          <input id="Alarm" type="time" name="Alarm" maxlength="100" required>
+          <input type="submit" value="OK">
+    </form>
+  </body>
+</html>
