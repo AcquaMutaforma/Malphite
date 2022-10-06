@@ -3,14 +3,7 @@
 
 class ElementoTradotto:
 
-    def __init__(self, audio: str, trad: str):
-        self.audio = audio
+    def __init__(self, file_audio: str, trad: str):
+        self.file_audio = file_audio
         self.traduzione = trad
-        print(f"[EleTradotto] - new - - audio= {self.audio} - - traduzione= {self.traduzione}")
-        pass
-
-    def get_audio(self):
-        return self.audio
-
-    def get_traduzione(self):
-        return self.traduzione
+        print(f"[EleTradotto] - new - - audio= {self.file_audio} - - traduzione= {self.traduzione}")

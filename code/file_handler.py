@@ -5,7 +5,6 @@ import soundfile as sf
 
 cartella_comando = "audio_richieste/"
 cartella_risposte = "risposte_registrate/"
-info_risposte = cartella_risposte + "/infoRisposte.txt"
 
 
 def crea_file_richiesta(freq, recording):
@@ -42,36 +41,6 @@ def elimina_audio(filename: str):
         print("[File_H] - Errore indefinito - rimozione audio fallita :(")
 
 
-def get_mappa_decisore():
-    """Recupera il file in memoria la mapp"""
-    if os.path.exists(info_risposte):
-        '''f = open(info_risposte, 'r')
-        toreturn = f.read()
-        f.close()
-        print(f"[File_H] - File {info_risposte} inviato come stringa")'''
-        return open(info_risposte, 'r')
-    else:
-        f = open(info_risposte, 'x')
-        f.close()
-        print(f"[File_H] - File {info_risposte} non trovato, ne creo uno")
-        return ''
-        # tanto se il file e' vuoto, al decisore arriva comunque un '' invece di aprire il file vuoto
-
-
-def update_file_mappa(lista_risp_stringa):
-    """Aggiorna il file con la mappa json con quello attivo in memoria"""
-    try:
-        f = open(info_risposte, 'w')
-        for x in lista_risp_stringa:
-            f.write(x)
-        f.close()
-        print("[File_H] - Mappa risposte aggiornata")
-    except PermissionError:
-        print("[File_H] - Errore permessi per aggiornamento mappa")
-    except Exception:
-        print("[File_H] - Errore indefinito per aggiornamento mappa")
-
-
 def apri_audio_risposta(nome_file: str):
     """Recupera la registrazione di una risposta"""
     try:
@@ -86,7 +55,7 @@ def apri_audio_risposta(nome_file: str):
 
 
 def add_audio_risposta(nuovo_nome: str, registrazione: str):
-    """SPOSTA una nuova registrazione nella cartella di risposte registrate dal custode"""
+    """SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto"""
     try:
         destinazione = cartella_risposte + "/" + nuovo_nome
         sorgente = os.fspath(registrazione)

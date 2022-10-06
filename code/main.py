@@ -1,27 +1,80 @@
 """Si puo' personalizzare il programma modificando i seguenti oggetti:
 myapi, registratore, message_handler e output_handler"""
-import servizio_AssemblyAI as myapi
-import traduttore as trad
+import servizio_AssemblyAI as MyAPI
+import elementoTradotto
 import registratore
-import decisore
-import esecutore
 import message_handler
+import risposta_model
 import output_handler
 
-if __name__ == '__main__':
 
+def __traduci(audio: str) -> elementoTradotto.ElementoTradotto or None:
+    """ Metodo che attraverso l'oggetto api che contiene, traduce un audio in testo """
+    print("[Traduttore] - avvio API")
+    testo = MyAPI.traduzione(audio)
+    print(f"[Traduttore] - traduzione= {testo}")
+    if testo is not None:
+        return elementoTradotto.ElementoTradotto(file_audio=audio, trad=testo)
+    else:
+        print("[Traduttore] - traduzione non riuscita, testo = None")
+        return None
+
+
+def __filtra_richiesta(testo: str):
+    """Metodo che sottrae le parole piu' corte di 3 caratteri e ritorna una lista
+    con le parole presenti nel comando ricevuto"""
+    tmp = testo.lower().split()
+    for x in tmp:
+        if len(x) <= 3:
+            tmp.remove(x)
+    return tmp
+
+
+def start():
     # ------ Avvio oggetti necessari ------
-    traduttore = trad.Traduttore(api=myapi)
-    mess_h = message_handler.TeleBot()
-    esec = esecutore.Esecutore(messaggistica=mess_h, output=output_handler)
-    decisore = decisore.Decisore(esec)
+    # mess_h = message_handler.TeleBot()
 
     # ------ Non avevo altre idee, quindi per ora si avvia cosi' ------------------------
     print("Scrivi 'start' per iniziare, altrimenti chiudo")
     comando = input()
-    if 'start' in comando:
-        registrazione = registratore.get_audio(3.0)
-        elem_tradotto = traduttore.traduci(registrazione)
-        decisore.valuta_comando(elem_trad=elem_tradotto)
+    if 'start' not in comando:
+        exit(0)
+
+    registrazione = registratore.get_audio(secondi=3.0)
+    elem_tradotto = __traduci(registrazione)
+
+    testo_filtrato = __filtra_richiesta(elem_tradotto.traduzione)
+    lista_valutazione = {}
+    # creo un array con gli ID delle risposte e il numero di volte che vengono trovati
+    for x in testo_filtrato:
+        key = risposta_model.get_idrisposte_con_keyword(x)
+        if key in lista_valutazione.keys():
+            lista_valutazione[key] = lista_valutazione.get(key) + 1
+        else:
+            lista_valutazione[key] = 1
+    # cerco l'id che compare piu volte
+    idRisposta = 0
+    massimo = 0
+    unico = True
+    for k, v in lista_valutazione.items():
+        if massimo < v:
+            idRisposta = k
+            massimo = v
+            unico = True
+        if massimo == v:
+            unico = False
+
+    # Se ho trovato una risposta (il suo id) che compare una sola volta allora abbiamo una risposta, altrimenti
+    # e' possibile che ci siano piu risposte valide, non sapendo quale sia quella corretta mandiamo tutto
+    # all'operatore tramite telegram
+    if unico and (idRisposta != 0):
+        output_handler.riproduci_audio(risposta_model.get_risposta_by_idr(idrisposta=idRisposta).percorsoFile)
+    else:
+        print("\nRisposta non trovata. Domanda = '" + elem_tradotto.traduzione + "'\n")
+        # message_handler.invia_richiesta(elem_tradotto)
+
     print("Ok - i'm done")
     exit(0)
+
+
+start()
