@@ -3,10 +3,10 @@ al comando ricevuto in formato {elementoTradotto}. Contiene una lista di
 parole chiave associate ad un risposta, e una lista di appoggio per
 valutare la risposta piu' corretta. """
 import json
-import esecutore
+import esecutore_DEL
 import elementoTradotto
 import file_handler
-import risposta
+import risposta_model
 
 
 class Decisore:

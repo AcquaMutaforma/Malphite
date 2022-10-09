@@ -21,7 +21,7 @@ sd.default.samplerate = frequency
 sd.default.channels = 2
 
 
-def get_audio(secondi):
+def get_audio(secondi) -> str:
     if secondi is None:
         duration = 4.0  # Recording duration in seconds
     else:
@@ -42,5 +42,5 @@ def get_audio(secondi):
 
 
 def __audio_to_file(recording):
-    '''Trasforma una variabile audio in un file in memoria'''
+    """Trasforma una variabile audio in un file in memoria"""
     return file_handler.crea_file_richiesta(frequency, recording)

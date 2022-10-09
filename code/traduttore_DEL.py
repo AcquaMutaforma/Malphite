@@ -17,9 +17,10 @@ class Traduttore:
         """ Metodo che attraverso l'oggetto api che contiene, traduce un audio in testo
         :param audio: path del file audio """
         print("[Traduttore] - avvio API")
-        testo = self.api.traduzione(audio)
+        testo = MyAPItraduzione(audio)
         print(f"[Traduttore] - traduzione= {testo}")
         if testo is not None:
             return elementoTradotto.ElementoTradotto(audio=audio, trad=testo)
         else:
             print("[Traduttore] - traduzione non riuscita, testo = None")
+            return None
