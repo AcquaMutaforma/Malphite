@@ -4,20 +4,10 @@
     <title>Band Listing</title>
   </head>
   <body>
-    <h1>All Bands</h1>
-    <ul>
-    {% for setting in settings %}
-      <li>
-        <h2>{{ setting.Alarm }}</h2>
-        <h2>{{ setting.id}}</h2>
-      </li>
-    {% endfor %}
-
-    </ul>
-    <form action={{ url }} method="PUT">
-      <label for="Alarm">Alarm: </label>
-          <input id="Alarm" type="time" name="Alarm" maxlength="100" required>
-          <input type="submit" value="OK">
-    </form>
+      <form action={{ url }} method="post">
+        {% csrf_token %}
+        {{ form }}
+      <input type="submit" value="Submit">
+      </form>
   </body>
 </html>
