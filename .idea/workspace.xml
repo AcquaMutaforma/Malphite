@@ -2,14 +2,385 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43ac9911-f9ba-4301-bf93-5eb8125bbcaf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/APScheduler-3.6.3.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/asyncio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/base_py3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/debug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/gevent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/pool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/tornado.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/executors/twisted.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/job.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/memory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/mongodb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/redis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/rethinkdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/sqlalchemy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/jobstores/zookeeper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/asyncio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/background.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/blocking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/gevent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/qt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/tornado.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/schedulers/twisted.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/combining.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/cron/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/cron/expressions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/cron/fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/triggers/interval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/apscheduler/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools-4.2.2.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools-4.2.2.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools-4.2.2.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools-4.2.2.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools-4.2.2.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools-4.2.2.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/decorators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/fifo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/keys.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/lfu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/lru.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/mru.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/rr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/cachetools/ttl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/LICENSE.dual" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/python_telegram_bot-13.14.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/LICENSE_APACHE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim-0.1.0.post0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/_common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/_compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/_compat_py2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/_compat_py3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/_exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/_impl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/pytz_deprecation_shim/helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/bot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/botcommand.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/botcommandscope.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/callbackquery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chataction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatadministratorrights.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatinvitelink.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatjoinrequest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatlocation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatmember.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatmemberupdated.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/chatpermissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/choseninlineresult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/dice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/basepersistence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/callbackcontext.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/callbackdatacache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/callbackqueryhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/chatjoinrequesthandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/chatmemberhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/choseninlineresulthandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/commandhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/contexttypes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/conversationhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/dictpersistence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/dispatcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/extbot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/inlinequeryhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/jobqueue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/messagehandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/messagequeue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/picklepersistence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/pollanswerhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/pollhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/precheckoutqueryhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/regexhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/shippingqueryhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/stringcommandhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/stringregexhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/typehandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/updater.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/utils/promise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/utils/types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/ext/utils/webhookhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/animation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/audio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/chatphoto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/contact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/inputfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/inputmedia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/location.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/photosize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/sticker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/venue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/video.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/videonote.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/files/voice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/forcereply.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/games/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/games/callbackgame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/games/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/games/gamehighscore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinekeyboardbutton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinekeyboardmarkup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultarticle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultaudio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedaudio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcacheddocument.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedgif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedmpeg4gif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedphoto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedsticker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedvideo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcachedvoice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultcontact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultdocument.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultgame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultgif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultlocation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultmpeg4gif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultphoto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultvenue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultvideo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inlinequeryresultvoice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inputcontactmessagecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inputinvoicemessagecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inputlocationmessagecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inputmessagecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inputtextmessagecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/inline/inputvenuemessagecontent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/keyboardbutton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/keyboardbuttonpolltype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/loginurl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/menubutton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/messageautodeletetimerchanged.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/messageentity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/messageid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/parsemode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/credentials.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/encryptedpassportelement.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/passportdata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/passportelementerrors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/passport/passportfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/invoice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/labeledprice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/orderinfo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/precheckoutquery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/shippingaddress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/shippingoption.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/shippingquery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/payment/successfulpayment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/poll.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/proximityalerttriggered.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/py.typed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/replykeyboardmarkup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/replykeyboardremove.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/replymarkup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/sentwebappmessage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/update.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/userprofilephotos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/deprecate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/promise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/utils/webhookhandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/_collections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/contrib/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/contrib/appengine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/contrib/ntlmpool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/contrib/pyopenssl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/contrib/socks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/filepost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/backports/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/backports/makefile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/ordered_dict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/six.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/ssl_match_hostname/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/packages/ssl_match_hostname/_implementation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/poolmanager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/retry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/selectors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/ssl_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/timeout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/vendor/ptb_urllib3/urllib3/util/wait.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/videochat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/voicechat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/webappdata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/webappinfo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/telegram/webhookinfo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado-6.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado-6.1.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado-6.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado-6.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado-6.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado-6.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/_locale_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/autoreload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/concurrent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/curl_httpclient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/escape.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/http1connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/httpclient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/httpserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/httputil.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/ioloop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/iostream.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/locale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/locks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/netutil.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/platform/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/platform/asyncio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/platform/caresresolver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/platform/twisted.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/py.typed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/queues.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/simple_httpclient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/tcpclient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/tcpserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/template.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/asyncio_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/auth_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/autoreload_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/concurrent_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/csv_translations/fr_FR.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/curl_httpclient_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/escape_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/gen_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/http1connection_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/httpclient_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/httpserver_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/httputil_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/import_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/ioloop_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/iostream_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/locale_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/locks_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/log_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/netutil_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/options_test.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/options_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/options_test_types.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/options_test_types_str.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/process_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/queues_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/resolve_test_helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/routing_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/runtests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/simple_httpclient_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/static/dir/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/static/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/static/sample.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/static/sample.xml.bz2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/static/sample.xml.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/static_foo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/tcpclient_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/tcpserver_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/template_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/templates/utf8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/test.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/test.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/testing_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/twisted_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/util_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/web_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/websocket_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/test/wsgi_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/web.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/websocket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tornado/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal-4.2.dist-info/zip-safe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal/unix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal/win32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lib/site-packages/tzlocal/windows_tz.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/Malphite/Templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/Malphite/Templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/Malphite/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/Malphite/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/Malphite/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/Malphite/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/Malphite/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/Malphite/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/Malphite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/Malphite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/Malphite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/Malphite/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Telegram_Bot/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Telegram_Bot/Bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +444,28 @@
       <recent name="C:\Users\Matteo\Malphite\Backend\mysite\Malphite\Templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.manage">
+  <component name="RunManager" selected="Python.Bot">
+    <configuration name="Bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Malphite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code/Telegram_Bot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/Telegram_Bot/Bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Malphite" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,8 +529,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Bot" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Python.registratore" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Bot" />
         <item itemvalue="Python.manage" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.registratore" />
