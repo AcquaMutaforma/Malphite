@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elimina</title>
+</head>
+<body>
+    <h3>Sicuro di voler eliminare questa risposta?</h3>
+    <hr>
+    IDR = {{ risposta.idr }}<br>
+    Nome = {{ risposta.nome }}<br>
+    Keywords = [<br>
+        <ul>
+        {% for key in lista_keywords %}
+            <li>{{key}}</li>
+        {% endfor %}
+        </ul>
+    <br>]<br>
+    Nome File = {{ risposta.percorsoFile }}<br><br>
+    <a href="{% url 'Malphite:risposte' %}"><button value="No"></button></a>
+</body>
+</html>

@@ -1,4 +1,7 @@
+import json
 import random
+
+from Tools.scripts.ndiff import fopen
 from scipy.io.wavfile import write
 import os
 import soundfile as sf
@@ -72,3 +75,16 @@ def add_audio_risposta(nuovo_nome: str, registrazione: str):
 
 def modifica_audio_risposta(nome_file: str, registrazione: str):
     add_audio_risposta(nome_file, registrazione)
+
+
+def leggi_config() -> {}:
+    f = fopen("config.txt")
+    to_ret = json.load(f)
+    f.close()
+    return to_ret
+
+
+def scrivi_config(conf: dict):
+    f = fopen("config.txt")
+    f.write(conf)
+    f.close()

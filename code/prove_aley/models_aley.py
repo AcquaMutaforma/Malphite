@@ -2,6 +2,11 @@
 from django.db import models
 
 
+# Create your models here.
+class Settings(models.Model):
+    Alarm = models.TimeField()
+
+
 class Risposta(models.Model):
     idr = models.BigAutoField(primary_key=True)
     nome = models.CharField(max_length=150)

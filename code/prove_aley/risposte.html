@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Risposte</title>
+</head>
+<body>
+    {% if lista_risposte %}
+        <ul>
+        {% for risposta in lista_risposte %}
+        <li><div>{{ risposta.idr }} - {{ risposta.nome }}
+            <a href="{% url 'Malphite:chiedi-elimina' risposta.idr %}">
+                <button value="Elimina"></button>
+            </a></div></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Non sono presenti delle risposte >.< </p>
+    {% endif %}
+</body>
+</html>

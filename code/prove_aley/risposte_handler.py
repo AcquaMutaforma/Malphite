@@ -1,4 +1,4 @@
-from risposta_model import Risposta, Keyword
+from models_aley import Risposta, Keyword
 
 
 def __aggiungi_risposta_alla_keyword(keyword: str, idRisposta: int):

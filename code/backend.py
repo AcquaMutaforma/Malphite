@@ -1,11 +1,20 @@
 """Si puo' personalizzare il programma modificando i seguenti oggetti:
 myapi, registratore, message_handler e output_handler"""
+import json
+
 import servizio_AssemblyAI as MyAPI
 import elementoTradotto
 import registratore
 import message_handler
+import file_handler as fh
 import risposta_model
 import output_handler
+from configurazione import Config
+import events_handler
+
+
+def suona_sveglia():
+    output_handler.riproduci_audio("sveglia.mp3")
 
 
 def __traduci(audio: str) -> elementoTradotto.ElementoTradotto or None:
@@ -75,6 +84,26 @@ def start():
 
     print("Ok - i'm done")
     exit(0)
+
+
+def __aggiorna_config(config: dict):
+    fh.scrivi_config(config)
+
+
+def imposta_sveglia(orario: str):
+    events_handler.EVENTO_SVEGLIA = events_handler.crea_schedule(orario=orario)
+    events_handler.STATO_SVEGLIA = True
+
+def modifica_stato_sveglia(stato: bool):
+    events_handler.STATO_SVEGLIA = stato
+
+
+def main():
+    configurazione = fh.leggi_config()
+    imposta_sveglia(orario=configurazione['orario_sveglia'])
+    modifica_stato_sveglia(stato=configurazione['stato_sveglia'])
+    while True:
+        # analizza audio e registra se serve
 
 
 start()
