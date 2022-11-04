@@ -1,9 +1,3 @@
 attraverso:	pip3 install -r requirements.txt
 si possono installare direttamente tutte le librerie esterne, potrebbe far comodo
-inserire uno script che avvii il tutto, evitando di caricare la repository git con le installazioni (come ha fatto ale eheh)
-
-valutare se rimuovere il componente traduttore o meno.
-
-mettere un boolean per abilitare i print, così se non serve non vengono chiamati, va più veloce e rimane più pulito.
-
-i comandi che vengono ricevuti dall'interfaccia web chi diamine li esegue? il decisore fa gia molte cosine.. forse dovrebbe pensarci qualcun'altro
+inserire uno script che avvii il tutto, evitando di caricare la repository git con le installazioni
