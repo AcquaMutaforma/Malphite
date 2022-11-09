@@ -1,28 +1,30 @@
 import json
-import random
+import time
+from datetime import date
 
 from Tools.scripts.ndiff import fopen
-from scipy.io.wavfile import write
 import os
 import soundfile as sf
 
-cartella_comando = "audio_richieste/"
+cartella_registrazioni = "audio_richieste/"
 cartella_risposte = "risposte_registrate/"
 
 
-def crea_file_richiesta(freq, recording):
+def audio_to_file(freq, recording):
     """Questo metodo scrive la registrazione nella cartella_comando, se e' gia' presente un file
     con lo stesso nome lo sovrascrive. Tecnicamente i comandi vengono gestiti singolarmente, ma nel
     dubbio i file vengono chiamati in maniera differente con un numero random. """
-    file_audio = cartella_comando + "richiesta" + str(random.randrange(0, 20)) + ".wav"
+    file_audio = cartella_registrazioni + "richiesta_" + \
+                 date.today().strftime("_%d_%m_%y_") + time.strftime("%H_%M_%S", time.localtime()) + ".wav"
     try:
-        write(file_audio, freq, recording)
+
+        sf.write(file=file_audio, samplerate=freq, data=recording)
         print("[File_H] - File audio di richiesta creato correttamente")
     except PermissionError:
-        print(f"[File_H] - Errore permessi scrittura file in ^ {cartella_comando} ^")
+        print(f"[File_H] - Errore permessi scrittura file in ^ {cartella_registrazioni} ^")
         return None
     except FileNotFoundError:
-        print(f"[File_H] - Errore file not found - {cartella_comando} -or- {recording.__class__}")
+        print(f"[File_H] - Errore file not found - {cartella_registrazioni} -or- {recording.__class__}")
         return None
     except Exception:
         print("[File_H] - Errore indefinito - scrittura richiesta fallita :(")

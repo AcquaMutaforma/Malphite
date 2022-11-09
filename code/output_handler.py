@@ -1,5 +1,6 @@
 import sounddevice as sd
 import file_handler
+import logManager as log
 
 
 def riproduci_audio(nome_file: str):
@@ -12,4 +13,4 @@ def riproduci_audio(nome_file: str):
         file.close()
         #  print("[Output_H] - Riproduzione file completata")
     except FileNotFoundError:  #  riproduzione di un messaggio pre-registrato di errore?
-        pass
+        log.logError('output_handler - FILE NOT FOUND ERROR -')

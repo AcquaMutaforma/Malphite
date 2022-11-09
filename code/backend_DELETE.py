@@ -5,11 +5,9 @@ import json
 import servizio_AssemblyAI as MyAPI
 import elementoTradotto
 import registratore
-import message_handler
 import file_handler as fh
 import risposta_model
 import output_handler
-from configurazione import Config
 import events_handler
 
 
@@ -94,6 +92,7 @@ def imposta_sveglia(orario: str):
     events_handler.EVENTO_SVEGLIA = events_handler.crea_schedule(orario=orario)
     events_handler.STATO_SVEGLIA = True
 
+
 def modifica_stato_sveglia(stato: bool):
     events_handler.STATO_SVEGLIA = stato
 
@@ -104,6 +103,7 @@ def main():
     modifica_stato_sveglia(stato=configurazione['stato_sveglia'])
     while True:
         # analizza audio e registra se serve
+        pass
 
 
 start()
