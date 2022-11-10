@@ -12,10 +12,10 @@ def get_voice(update: Update, context: CallbackContext) -> None:
 
 
 def main():
-    api_key = '5404455233:AAG5W7T5MOqyLNo3wEii_2JKtzTpAkdsw5k'
-    user_id = '409080949'
+    api_key = ''
+    user_id = ''
 
-    updater = Updater("5404455233:AAG5W7T5MOqyLNo3wEii_2JKtzTpAkdsw5k", use_context=True)
+    updater = Updater("", use_context=True)
     bot = telegram.Bot(token=api_key)
 
     bot.sendAudio(chat_id=user_id, audio=open('TelegramBot\\brobob.mp3', 'rb'))
