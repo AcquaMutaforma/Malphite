@@ -11,7 +11,7 @@ LIVELLO_OUTPUT = 20
 logFileName = 'logfile' + datetime.datetime.now().strftime('_%d_%m_%Y') + '.txt'
 
 logging.basicConfig(filename=logFileName, encoding='utf-8',
-                    format='[[%(levelname)s]] -- %(asctime)s -- %(message)s',
+                    format='[[%(levelname)s]] - %(asctime)s - %(message)s',
                     datefmt='%m/%d/%Y %I:%M:%S %p',
                     level=LIVELLO_OUTPUT)
 

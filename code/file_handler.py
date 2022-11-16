@@ -1,7 +1,6 @@
 import json
 import time
 from datetime import date
-
 from Tools.scripts.ndiff import fopen
 import os
 import soundfile as sf
@@ -14,11 +13,11 @@ def audio_to_file(freq, recording):
     """Questo metodo scrive la registrazione nella cartella_comando, se e' gia' presente un file
     con lo stesso nome lo sovrascrive. Tecnicamente i comandi vengono gestiti singolarmente, ma nel
     dubbio i file vengono chiamati in maniera differente con un numero random. """
-    file_audio = cartella_registrazioni + "richiesta_" + \
+    filename = cartella_registrazioni + "richiesta_" + \
                  date.today().strftime("_%d_%m_%y_") + time.strftime("%H_%M_%S", time.localtime()) + ".wav"
     try:
 
-        sf.write(file=file_audio, samplerate=freq, data=recording)
+        sf.write(file=filename, samplerate=freq, data=recording)
         print("[File_H] - File audio di richiesta creato correttamente")
     except PermissionError:
         print(f"[File_H] - Errore permessi scrittura file in ^ {cartella_registrazioni} ^")
@@ -29,7 +28,7 @@ def audio_to_file(freq, recording):
     except Exception:
         print("[File_H] - Errore indefinito - scrittura richiesta fallita :(")
         return None
-    return file_audio
+    return filename
 
 
 def elimina_audio(filename: str):
@@ -58,7 +57,7 @@ def apri_audio_risposta(nome_file: str):
         print("[File_H] - Errore indefinito in apertura audio :(")
     return None
 
-
+# todo: delete, ho dimenticato per quale motivo sia stato creato
 def add_audio_risposta(nuovo_nome: str, registrazione: str):
     """SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto"""
     try:
@@ -75,8 +74,8 @@ def add_audio_risposta(nuovo_nome: str, registrazione: str):
     # todo: controllare che funzioni davvero >.<
 
 
-def modifica_audio_risposta(nome_file: str, registrazione: str):
-    add_audio_risposta(nome_file, registrazione)
+"""def modifica_audio_risposta(nome_file: str, registrazione: str):
+    add_audio_risposta(nome_file, registrazione)"""
 
 
 def leggi_config() -> {}:

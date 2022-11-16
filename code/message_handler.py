@@ -1,3 +1,4 @@
+import numpy as np
 
 
 def __load_info():
@@ -9,5 +10,5 @@ def __ricevi_audio_risposta():
     pass
 
 
-def invia_richiesta():
+def invia_richiesta(filename: str, frase: str):
     pass

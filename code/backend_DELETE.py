@@ -2,8 +2,8 @@
 myapi, registratore, message_handler e output_handler"""
 import json
 
-import servizio_AssemblyAI as MyAPI
-import elementoTradotto
+import servizio_AssemblyAI_DELETE as MyAPI
+import elementoTradotto_DELETE
 import registratore
 import file_handler as fh
 import risposta_model
