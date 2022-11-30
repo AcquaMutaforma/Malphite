@@ -7,13 +7,17 @@ import logging
 import datetime
 
 # 10=debug 20=info 30=warning 40=error 50=critical
-LIVELLO_OUTPUT = 20
-logFileName = 'logfile' + datetime.datetime.now().strftime('_%d_%m_%Y') + '.txt'
+LIVELLO_OUTPUT = 10
+logFileName = 'logfile' + datetime.datetime.now().strftime('_%d_%m_%y') + '.txt'
 
 logging.basicConfig(filename=logFileName, encoding='utf-8',
                     format='[[%(levelname)s]] - %(asctime)s - %(message)s',
-                    datefmt='%m/%d/%Y %I:%M:%S %p',
+                    datefmt='%m/%d/%y %I:%M:%S %p',
                     level=LIVELLO_OUTPUT)
+
+
+def logDebug(stringa: str):
+    logging.debug(stringa)
 
 
 def logInfo(stringa: str):
@@ -21,12 +25,15 @@ def logInfo(stringa: str):
 
 
 def logWarning(stringa: str):
+    print(str)
     logging.warning(stringa)
 
 
 def logError(stringa: str):
+    print(str)
     logging.error(stringa)
 
 
 def logCritical(stringa: str):
+    print(str)
     logging.critical(stringa)

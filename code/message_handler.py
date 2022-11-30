@@ -6,9 +6,5 @@ def __load_info():
     pass
 
 
-def __ricevi_audio_risposta():
-    pass
-
-
 def invia_richiesta(filename: str, frase: str):
     pass

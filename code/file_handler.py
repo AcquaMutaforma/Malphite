@@ -1,7 +1,7 @@
 import json
 import time
+import logManager as log
 from datetime import date
-from Tools.scripts.ndiff import fopen
 import os
 import soundfile as sf
 
@@ -14,9 +14,11 @@ def audio_to_file(freq, recording):
     con lo stesso nome lo sovrascrive. Tecnicamente i comandi vengono gestiti singolarmente, ma nel
     dubbio i file vengono chiamati in maniera differente con un numero random. """
     filename = cartella_registrazioni + "richiesta_" + \
-                 date.today().strftime("_%d_%m_%y_") + time.strftime("%H_%M_%S", time.localtime()) + ".wav"
+               date.today().strftime("_%d_%m_%y_") + time.strftime("%H_%M_%S", time.localtime()) + ".wav"
+    if recording is None or freq < 10000:
+        log.logError("Scrittura file fallita, recording = None")
+        return 'None'
     try:
-
         sf.write(file=filename, samplerate=freq, data=recording)
         print("[File_H] - File audio di richiesta creato correttamente")
     except PermissionError:
@@ -57,6 +59,7 @@ def apri_audio_risposta(nome_file: str):
         print("[File_H] - Errore indefinito in apertura audio :(")
     return None
 
+
 # todo: delete, ho dimenticato per quale motivo sia stato creato
 def add_audio_risposta(nuovo_nome: str, registrazione: str):
     """SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto"""
@@ -71,7 +74,6 @@ def add_audio_risposta(nuovo_nome: str, registrazione: str):
         print("[File_H] - File registrazione non trovato")
     except Exception:
         print("[File_H] - Errore indefinito per aggiungere/modificare registrazione :(")
-    # todo: controllare che funzioni davvero >.<
 
 
 """def modifica_audio_risposta(nome_file: str, registrazione: str):
@@ -79,13 +81,30 @@ def add_audio_risposta(nuovo_nome: str, registrazione: str):
 
 
 def leggi_config() -> {}:
-    f = fopen("config.txt")
-    to_ret = json.load(f)
-    f.close()
-    return to_ret
+    try:
+        f = open("config.txt", 'r')
+        to_ret = json.load(f)
+        f.close()
+        return to_ret
+    except FileNotFoundError:
+        f = open("config.txt", 'w')
+        f.write(json.dumps({
+            'api_key': '',
+            'user_id': '',
+            'model_filename': 'modello',
+            'stato_sveglia': False,
+            'orario_sveglia': ''}))
+        f.close()
+    return {
+        'api_key': '',
+        'user_id': '',
+        'model_filename': 'modello',
+        'stato_sveglia': False,
+        'orario_sveglia': ''}
 
 
 def scrivi_config(conf: dict):
-    f = fopen("config.txt")
-    f.write(conf)
+    f = open("config.txt", 'w')
+    f.write(json.dumps(conf))
     f.close()
+

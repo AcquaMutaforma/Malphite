@@ -2,8 +2,9 @@ from stt import Model
 import numpy as np
 from os.path import exists
 import logManager as log
+import file_handler as fh
 
-centro = Model('')
+centro = Model(fh.leggi_config()['model_filename'])
 
 
 def traduci(arr: np.ndarray) -> str:

@@ -5,7 +5,7 @@ import file_handler as fh
 import numpy as np
 import output_handler as out
 import message_handler
-# django imports
+# django
 import risposte_handler as rh
 
 
@@ -15,9 +15,8 @@ PASSIVA = False
 
 def main(MODALITA=PASSIVA):
     # Manca tutta la parte della configurazione, i dati sono nel blocco note sul desktop
-    # in Malphite/mysite/settings c'è una configurazione del database, ip, port, username, pass da usare come esempio
     if MODALITA:
-        modAttiva("model_path")  # todo: aggiungere config.modelPath
+        modAttiva()
     else:
         modPassiva()
     """
@@ -44,50 +43,78 @@ def main(MODALITA=PASSIVA):
 
 def modPassiva():
     registratore = rg.get_audio_stream()
+    registratore.start()
+    fh.cartella_registrazioni = 'test_passiva/'
     while True:
-        audio_filename = fh.audio_to_file(rg.frequency, __get_registrazione(registratore=registratore))
-        log.logInfo("salvataggio file { " + audio_filename + " }")
+        try:
+            print("recording..")
+            audio_filename = fh.audio_to_file(rg.frequency, __get_registrazione(registratore=registratore))
+            log.logInfo("salvataggio file { " + audio_filename + " }")
+            print("done!")
+        except KeyboardInterrupt:
+            print("Addio e grazie per il pesce :')")
+            exit(0)
+        # break  # per un solo ciclo
 
 
-def modAttiva(model_path: str):
+def modAttiva():
     registratore = rg.get_audio_stream()
-    traduttore.setModel(model_path)
+    registratore.start()
     while True:
-        temporaneo = __get_registrazione(registratore=registratore)
-        frase = traduttore.traduci(temporaneo)
-        risultato = __decidere(frase)
-        # se non trovo una risposta, invio audio e traduzione all'addetto con telegram
-        if not risultato:
-            nome_file = fh.audio_to_file(rg.frequency, temporaneo)
-            message_handler.invia_richiesta(nome_file, frase)
-            log.logInfo("\nRisposta non trovata. Domanda = [" + frase + "]. File = [" +
-                        nome_file + "]")
+        try:
+            temporaneo = __get_registrazione(registratore=registratore)
+            frase = traduttore.traduci(temporaneo)
+            risultato = __decidere(frase)
+            # se non trovo una risposta, invio audio e traduzione all'addetto con telegram
+            if not risultato:
+                nome_file = fh.audio_to_file(rg.frequency, temporaneo)
+                message_handler.invia_richiesta(nome_file, frase)
+                log.logInfo("\nRisposta non trovata. Domanda = [" + frase + "]. File = [" +
+                            nome_file + "]")
+        except KeyboardInterrupt:
+            print("Addio e grazie per il pesce :')")
+            exit(0)
 
 
 def __get_registrazione(registratore, numero_secondi=3):
+    log.logDebug("avvio funzione __get_registrazione")
     giri_a_vuoto = 1
     contatore_giri_a_vuoto = 0
-    buffer = np.ndarray
+    buffer = np.empty(shape=(1, 1))
     contatore_buffer = 0
+    max_giri = 2
     while True:
+        massimo_valore = 0
+        minimo_valore = 0
         solo_rumore = True
-        tmp = registratore.read(rg.frequency * numero_secondi)
+        tmp, _ = registratore.read(rg.frequency * numero_secondi)  # shape(1,1) una colonna per canale (sample,chann)
 
-        for x in np.nditer(tmp):
-            if abs(x) > rg.soglia_y:
+        for x in tmp.tolist():  # ogni elemento e' una lista con (value, channel) quindi ([0],[1]), ([0],[1]) etc..
+            valore = x[0]
+            if abs(valore) > rg.soglia_y:
                 solo_rumore = False
-                break
-        # se ogni elemento è < di 0.003 allora ignoro il nuovo blocco, scrivo e invio un file audio
+            if valore > massimo_valore:
+                massimo_valore = valore
+            if valore < minimo_valore:
+                minimo_valore = valore
+        log.logDebug("massimo = " + str(massimo_valore))
+        log.logDebug("minimo = " + str(minimo_valore))
+
         if solo_rumore:
             contatore_giri_a_vuoto += 1
-            log.logInfo('contatore giri a vuoto ++')
+            log.logDebug('blocco "vuoto", contatore_giri_a_vuoto++')
         else:
-            buffer = np.concatenate(buffer, tmp)
+            if contatore_buffer == 0:
+                buffer = tmp
+            else:
+                buffer = np.concatenate((buffer, tmp))
+            log.logDebug('buffer non vuoto, concatenazione completata')
             contatore_buffer += 1
             contatore_giri_a_vuoto = 0
 
-        # todo: dovrebbe restituire solo se l'ultimo blocco era silenzioso, lo fa? controlla !
-        if contatore_giri_a_vuoto >= giri_a_vuoto and contatore_buffer > 0:
+        if (contatore_giri_a_vuoto >= giri_a_vuoto and contatore_buffer > 0) or contatore_buffer > max_giri:
+            log.logDebug('blocchi audio di vuoto = ' + str(contatore_giri_a_vuoto) +
+                         ' contatore buffer = ' + str(contatore_buffer))
             return buffer
 
 
@@ -123,3 +150,5 @@ def __decidere(frase: str):
     else:
         return False
 
+
+main()
