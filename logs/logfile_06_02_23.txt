@@ -1,0 +1,43 @@
+[[DEBUG]] - 06/02/23 05:41:41 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:41:41 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:41:57 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:41:57 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:42:00 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:42:03 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:42:06 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:42:06 PM - blocchi audio minori della soglia rumore = 0 contatore blocchi buffer = 3
+[[DEBUG]] - 06/02/23 05:45:18 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:45:18 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:45:21 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:45:51 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:45:51 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:45:54 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:46:13 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:46:13 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:46:16 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 06/02/23 05:46:19 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:50:36 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:50:36 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:52:45 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:52:45 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:52:48 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 06/02/23 05:52:51 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:52:54 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:52:57 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:52:57 PM - blocchi audio minori della soglia rumore = 0 contatore blocchi buffer = 3
+[[DEBUG]] - 06/02/23 05:53:27 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:53:27 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:53:30 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:53:33 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:53:36 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:53:36 PM - blocchi audio minori della soglia rumore = 0 contatore blocchi buffer = 3
+[[DEBUG]] - 06/02/23 05:55:19 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:55:19 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:55:49 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:55:49 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:57:09 PM - Inzio registrazione MOD ATTIVA
+[[DEBUG]] - 06/02/23 05:57:09 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 06/02/23 05:57:12 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:57:15 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:57:18 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 06/02/23 05:57:18 PM - blocchi audio minori della soglia rumore = 0 contatore blocchi buffer = 3

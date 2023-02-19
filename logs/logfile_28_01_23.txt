@@ -1,0 +1,8 @@
+[[DEBUG]] - 28/01/23 02:35:05 PM - Using proactor: IocpProactor
+[[DEBUG]] - 28/01/23 02:35:05 PM - Entering: get_me
+[[DEBUG]] - 28/01/23 02:35:05 PM - This Application is already shut down. Returning.
+[[DEBUG]] - 28/01/23 02:35:05 PM - This Updater is already shut down. Returning.
+[[CRITICAL]] - 28/01/23 02:36:17 PM - CreateModel failed with 'Failed to initialize memory mapped model.' (0x3000) - STT Model 
+[[CRITICAL]] - 28/01/23 02:37:02 PM - CreateModel failed with 'Failed to initialize memory mapped model.' (0x3000) - STT Model 
+[[CRITICAL]] - 28/01/23 02:43:08 PM - CreateModel failed with 'Failed to initialize memory mapped model.' (0x3000) - STT Model 
+[[CRITICAL]] - 28/01/23 02:43:19 PM - CreateModel failed with 'Failed to initialize memory mapped model.' (0x3000) - STT Model 

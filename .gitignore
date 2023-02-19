@@ -1,0 +1,11 @@
+*.pyc
+
+.idea/
+
+myvenv/
+
+test_passiva/
+
+STT_MODEL_ITA/
+
+prove_aley/

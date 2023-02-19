@@ -1,0 +1,73 @@
+[[DEBUG]] - 11/24/22 03:55:46 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 11/24/22 03:55:49 PM - massimo = 345
+[[DEBUG]] - 11/24/22 03:55:49 PM - minimo = -394
+[[DEBUG]] - 11/24/22 03:55:49 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:55:52 PM - massimo = 690
+[[DEBUG]] - 11/24/22 03:55:52 PM - minimo = -669
+[[DEBUG]] - 11/24/22 03:55:52 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:55:55 PM - massimo = 445
+[[DEBUG]] - 11/24/22 03:55:55 PM - minimo = -466
+[[DEBUG]] - 11/24/22 03:55:55 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:55:55 PM - blocchi audio di vuoto = 0 contatore buffer = 3
+[[INFO]] - 11/24/22 03:55:55 PM - salvataggio file { test_passiva/richiesta__24_11_22_15_55_55.wav }
+[[DEBUG]] - 11/24/22 03:56:35 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 11/24/22 03:56:39 PM - massimo = 9744
+[[DEBUG]] - 11/24/22 03:56:39 PM - minimo = -9763
+[[DEBUG]] - 11/24/22 03:56:39 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:56:42 PM - massimo = 20326
+[[DEBUG]] - 11/24/22 03:56:42 PM - minimo = -22851
+[[DEBUG]] - 11/24/22 03:56:42 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:56:45 PM - massimo = 12969
+[[DEBUG]] - 11/24/22 03:56:45 PM - minimo = -13008
+[[DEBUG]] - 11/24/22 03:56:45 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:56:45 PM - blocchi audio di vuoto = 0 contatore buffer = 3
+[[INFO]] - 11/24/22 03:56:45 PM - salvataggio file { test_passiva/richiesta__24_11_22_15_56_45.wav }
+[[DEBUG]] - 11/24/22 03:56:54 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 11/24/22 03:56:57 PM - massimo = 1137
+[[DEBUG]] - 11/24/22 03:56:57 PM - minimo = -1086
+[[DEBUG]] - 11/24/22 03:56:57 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:57:00 PM - massimo = 739
+[[DEBUG]] - 11/24/22 03:57:00 PM - minimo = -840
+[[DEBUG]] - 11/24/22 03:57:00 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:57:03 PM - massimo = 1199
+[[DEBUG]] - 11/24/22 03:57:03 PM - minimo = -1140
+[[DEBUG]] - 11/24/22 03:57:03 PM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 11/24/22 03:57:03 PM - blocchi audio di vuoto = 0 contatore buffer = 3
+[[INFO]] - 11/24/22 03:57:03 PM - salvataggio file { test_passiva/richiesta__24_11_22_15_57_03.wav }
+[[DEBUG]] - 11/24/22 04:01:01 PM - avvio funzione __get_registrazione
+[[DEBUG]] - 11/24/22 04:01:04 PM - massimo = 2206
+[[DEBUG]] - 11/24/22 04:01:04 PM - minimo = -2356
+[[DEBUG]] - 11/24/22 04:01:04 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:07 PM - massimo = 2010
+[[DEBUG]] - 11/24/22 04:01:07 PM - minimo = -1933
+[[DEBUG]] - 11/24/22 04:01:07 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:10 PM - massimo = 1120
+[[DEBUG]] - 11/24/22 04:01:10 PM - minimo = -1176
+[[DEBUG]] - 11/24/22 04:01:10 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:13 PM - massimo = 998
+[[DEBUG]] - 11/24/22 04:01:13 PM - minimo = -983
+[[DEBUG]] - 11/24/22 04:01:13 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:16 PM - massimo = 2307
+[[DEBUG]] - 11/24/22 04:01:16 PM - minimo = -2278
+[[DEBUG]] - 11/24/22 04:01:16 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:19 PM - massimo = 5081
+[[DEBUG]] - 11/24/22 04:01:19 PM - minimo = -3689
+[[DEBUG]] - 11/24/22 04:01:19 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:22 PM - massimo = 1227
+[[DEBUG]] - 11/24/22 04:01:22 PM - minimo = -1223
+[[DEBUG]] - 11/24/22 04:01:22 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:25 PM - massimo = 642
+[[DEBUG]] - 11/24/22 04:01:25 PM - minimo = -611
+[[DEBUG]] - 11/24/22 04:01:25 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:28 PM - massimo = 5776
+[[DEBUG]] - 11/24/22 04:01:28 PM - minimo = -6851
+[[DEBUG]] - 11/24/22 04:01:28 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:31 PM - massimo = 4720
+[[DEBUG]] - 11/24/22 04:01:31 PM - minimo = -4753
+[[DEBUG]] - 11/24/22 04:01:31 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:34 PM - massimo = 1061
+[[DEBUG]] - 11/24/22 04:01:34 PM - minimo = -1135
+[[DEBUG]] - 11/24/22 04:01:34 PM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 11/24/22 04:01:37 PM - massimo = 2454
+[[DEBUG]] - 11/24/22 04:01:37 PM - minimo = -2339
+[[DEBUG]] - 11/24/22 04:01:37 PM - blocco "vuoto", contatore_giri_a_vuoto++

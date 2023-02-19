@@ -1,0 +1,481 @@
+[[DEBUG]] - 03/01/23 10:07:14 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:17 AM - massimo = 4521
+[[DEBUG]] - 03/01/23 10:07:17 AM - minimo = -4176
+[[DEBUG]] - 03/01/23 10:07:17 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:20 AM - massimo = 526
+[[DEBUG]] - 03/01/23 10:07:20 AM - minimo = -296
+[[DEBUG]] - 03/01/23 10:07:20 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:07:20 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:07:20 AM - salvataggio file { rec_03_01_23_10_07_20.wav }
+[[DEBUG]] - 03/01/23 10:07:20 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:23 AM - massimo = 5702
+[[DEBUG]] - 03/01/23 10:07:23 AM - minimo = -4606
+[[DEBUG]] - 03/01/23 10:07:23 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:26 AM - massimo = 207
+[[DEBUG]] - 03/01/23 10:07:26 AM - minimo = -213
+[[DEBUG]] - 03/01/23 10:07:26 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:07:26 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:07:26 AM - salvataggio file { rec_03_01_23_10_07_26.wav }
+[[DEBUG]] - 03/01/23 10:07:26 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:29 AM - massimo = 4505
+[[DEBUG]] - 03/01/23 10:07:29 AM - minimo = -3142
+[[DEBUG]] - 03/01/23 10:07:29 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:32 AM - massimo = 183
+[[DEBUG]] - 03/01/23 10:07:32 AM - minimo = -180
+[[DEBUG]] - 03/01/23 10:07:32 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:07:32 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:07:32 AM - salvataggio file { rec_03_01_23_10_07_32.wav }
+[[DEBUG]] - 03/01/23 10:07:32 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:35 AM - massimo = 5185
+[[DEBUG]] - 03/01/23 10:07:35 AM - minimo = -4261
+[[DEBUG]] - 03/01/23 10:07:35 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:38 AM - massimo = 323
+[[DEBUG]] - 03/01/23 10:07:38 AM - minimo = -341
+[[DEBUG]] - 03/01/23 10:07:38 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:07:38 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:07:38 AM - salvataggio file { rec_03_01_23_10_07_38.wav }
+[[DEBUG]] - 03/01/23 10:07:38 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:41 AM - massimo = 2857
+[[DEBUG]] - 03/01/23 10:07:41 AM - minimo = -2784
+[[DEBUG]] - 03/01/23 10:07:41 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:44 AM - massimo = 279
+[[DEBUG]] - 03/01/23 10:07:44 AM - minimo = -552
+[[DEBUG]] - 03/01/23 10:07:44 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:07:44 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:07:44 AM - salvataggio file { rec_03_01_23_10_07_44.wav }
+[[DEBUG]] - 03/01/23 10:07:44 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:47 AM - massimo = 3942
+[[DEBUG]] - 03/01/23 10:07:47 AM - minimo = -3385
+[[DEBUG]] - 03/01/23 10:07:47 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:50 AM - massimo = 2651
+[[DEBUG]] - 03/01/23 10:07:50 AM - minimo = -3017
+[[DEBUG]] - 03/01/23 10:07:50 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:53 AM - massimo = 1108
+[[DEBUG]] - 03/01/23 10:07:53 AM - minimo = -1048
+[[DEBUG]] - 03/01/23 10:07:53 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:53 AM - blocchi audio minori della soglia rumore = 0 contatore blocchi buffer = 3
+[[INFO]] - 03/01/23 10:07:53 AM - salvataggio file { rec_03_01_23_10_07_53.wav }
+[[DEBUG]] - 03/01/23 10:07:53 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:07:56 AM - massimo = 4623
+[[DEBUG]] - 03/01/23 10:07:56 AM - minimo = -3567
+[[DEBUG]] - 03/01/23 10:07:56 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:07:59 AM - massimo = 969
+[[DEBUG]] - 03/01/23 10:07:59 AM - minimo = -891
+[[DEBUG]] - 03/01/23 10:07:59 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:08:02 AM - massimo = 555
+[[DEBUG]] - 03/01/23 10:08:02 AM - minimo = -577
+[[DEBUG]] - 03/01/23 10:08:02 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:08:02 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 2
+[[INFO]] - 03/01/23 10:08:02 AM - salvataggio file { rec_03_01_23_10_08_02.wav }
+[[DEBUG]] - 03/01/23 10:08:02 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:11:51 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:11:54 AM - massimo = 3621
+[[DEBUG]] - 03/01/23 10:11:54 AM - minimo = -2725
+[[DEBUG]] - 03/01/23 10:11:54 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:11:57 AM - massimo = 861
+[[DEBUG]] - 03/01/23 10:11:57 AM - minimo = -652
+[[DEBUG]] - 03/01/23 10:11:57 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:12:00 AM - massimo = 306
+[[DEBUG]] - 03/01/23 10:12:00 AM - minimo = -616
+[[DEBUG]] - 03/01/23 10:12:00 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:12:00 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 2
+[[INFO]] - 03/01/23 10:12:00 AM - salvataggio file { rec_03_01_23_10_12_00.wav }
+[[DEBUG]] - 03/01/23 10:12:00 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:01 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:04 AM - massimo = 6751
+[[DEBUG]] - 03/01/23 10:13:04 AM - minimo = -5090
+[[DEBUG]] - 03/01/23 10:13:04 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:07 AM - massimo = 243
+[[DEBUG]] - 03/01/23 10:13:07 AM - minimo = -232
+[[DEBUG]] - 03/01/23 10:13:07 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:07 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:07 AM - salvataggio file { rec_03_01_23_10_13_07.wav }
+[[DEBUG]] - 03/01/23 10:13:07 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:10 AM - massimo = 5459
+[[DEBUG]] - 03/01/23 10:13:10 AM - minimo = -4027
+[[DEBUG]] - 03/01/23 10:13:10 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:13 AM - massimo = 271
+[[DEBUG]] - 03/01/23 10:13:13 AM - minimo = -246
+[[DEBUG]] - 03/01/23 10:13:13 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:13 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:13 AM - salvataggio file { rec_03_01_23_10_13_13.wav }
+[[DEBUG]] - 03/01/23 10:13:13 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:16 AM - massimo = 7505
+[[DEBUG]] - 03/01/23 10:13:16 AM - minimo = -5985
+[[DEBUG]] - 03/01/23 10:13:16 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:19 AM - massimo = 250
+[[DEBUG]] - 03/01/23 10:13:19 AM - minimo = -261
+[[DEBUG]] - 03/01/23 10:13:19 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:19 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:19 AM - salvataggio file { rec_03_01_23_10_13_19.wav }
+[[DEBUG]] - 03/01/23 10:13:19 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:22 AM - massimo = 5423
+[[DEBUG]] - 03/01/23 10:13:22 AM - minimo = -4357
+[[DEBUG]] - 03/01/23 10:13:22 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:25 AM - massimo = 223
+[[DEBUG]] - 03/01/23 10:13:25 AM - minimo = -292
+[[DEBUG]] - 03/01/23 10:13:25 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:25 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:25 AM - salvataggio file { rec_03_01_23_10_13_25.wav }
+[[DEBUG]] - 03/01/23 10:13:25 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:28 AM - massimo = 5440
+[[DEBUG]] - 03/01/23 10:13:28 AM - minimo = -4676
+[[DEBUG]] - 03/01/23 10:13:28 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:31 AM - massimo = 254
+[[DEBUG]] - 03/01/23 10:13:31 AM - minimo = -282
+[[DEBUG]] - 03/01/23 10:13:31 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:31 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:31 AM - salvataggio file { rec_03_01_23_10_13_31.wav }
+[[DEBUG]] - 03/01/23 10:13:31 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:34 AM - massimo = 6350
+[[DEBUG]] - 03/01/23 10:13:34 AM - minimo = -5768
+[[DEBUG]] - 03/01/23 10:13:34 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:37 AM - massimo = 208
+[[DEBUG]] - 03/01/23 10:13:37 AM - minimo = -195
+[[DEBUG]] - 03/01/23 10:13:37 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:37 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:37 AM - salvataggio file { rec_03_01_23_10_13_37.wav }
+[[DEBUG]] - 03/01/23 10:13:37 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:40 AM - massimo = 5521
+[[DEBUG]] - 03/01/23 10:13:40 AM - minimo = -5208
+[[DEBUG]] - 03/01/23 10:13:40 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:43 AM - massimo = 244
+[[DEBUG]] - 03/01/23 10:13:43 AM - minimo = -241
+[[DEBUG]] - 03/01/23 10:13:43 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:43 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:43 AM - salvataggio file { rec_03_01_23_10_13_43.wav }
+[[DEBUG]] - 03/01/23 10:13:43 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:46 AM - massimo = 3344
+[[DEBUG]] - 03/01/23 10:13:46 AM - minimo = -2495
+[[DEBUG]] - 03/01/23 10:13:46 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:49 AM - massimo = 250
+[[DEBUG]] - 03/01/23 10:13:49 AM - minimo = -210
+[[DEBUG]] - 03/01/23 10:13:49 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:49 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:49 AM - salvataggio file { rec_03_01_23_10_13_49.wav }
+[[DEBUG]] - 03/01/23 10:13:49 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:52 AM - massimo = 3863
+[[DEBUG]] - 03/01/23 10:13:52 AM - minimo = -2951
+[[DEBUG]] - 03/01/23 10:13:52 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:13:55 AM - massimo = 254
+[[DEBUG]] - 03/01/23 10:13:55 AM - minimo = -240
+[[DEBUG]] - 03/01/23 10:13:55 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:13:55 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:13:55 AM - salvataggio file { rec_03_01_23_10_13_55.wav }
+[[DEBUG]] - 03/01/23 10:13:55 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:13:58 AM - massimo = 5564
+[[DEBUG]] - 03/01/23 10:13:58 AM - minimo = -4479
+[[DEBUG]] - 03/01/23 10:13:58 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:01 AM - massimo = 275
+[[DEBUG]] - 03/01/23 10:14:01 AM - minimo = -238
+[[DEBUG]] - 03/01/23 10:14:01 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:01 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:01 AM - salvataggio file { rec_03_01_23_10_14_01.wav }
+[[DEBUG]] - 03/01/23 10:14:01 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:14:04 AM - massimo = 5403
+[[DEBUG]] - 03/01/23 10:14:04 AM - minimo = -4036
+[[DEBUG]] - 03/01/23 10:14:04 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:07 AM - massimo = 252
+[[DEBUG]] - 03/01/23 10:14:07 AM - minimo = -241
+[[DEBUG]] - 03/01/23 10:14:07 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:07 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:07 AM - salvataggio file { rec_03_01_23_10_14_07.wav }
+[[DEBUG]] - 03/01/23 10:14:07 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:14:10 AM - massimo = 4270
+[[DEBUG]] - 03/01/23 10:14:10 AM - minimo = -3723
+[[DEBUG]] - 03/01/23 10:14:10 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:13 AM - massimo = 241
+[[DEBUG]] - 03/01/23 10:14:13 AM - minimo = -284
+[[DEBUG]] - 03/01/23 10:14:13 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:13 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:13 AM - salvataggio file { rec_03_01_23_10_14_13.wav }
+[[DEBUG]] - 03/01/23 10:14:13 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:14:16 AM - massimo = 4955
+[[DEBUG]] - 03/01/23 10:14:16 AM - minimo = -4310
+[[DEBUG]] - 03/01/23 10:14:16 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:19 AM - massimo = 230
+[[DEBUG]] - 03/01/23 10:14:19 AM - minimo = -271
+[[DEBUG]] - 03/01/23 10:14:19 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:19 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:19 AM - salvataggio file { rec_03_01_23_10_14_19.wav }
+[[DEBUG]] - 03/01/23 10:14:19 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:14:22 AM - massimo = 5875
+[[DEBUG]] - 03/01/23 10:14:22 AM - minimo = -5454
+[[DEBUG]] - 03/01/23 10:14:22 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:25 AM - massimo = 254
+[[DEBUG]] - 03/01/23 10:14:25 AM - minimo = -243
+[[DEBUG]] - 03/01/23 10:14:25 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:25 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:25 AM - salvataggio file { rec_03_01_23_10_14_25.wav }
+[[DEBUG]] - 03/01/23 10:14:25 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:14:28 AM - massimo = 4942
+[[DEBUG]] - 03/01/23 10:14:28 AM - minimo = -4086
+[[DEBUG]] - 03/01/23 10:14:28 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:31 AM - massimo = 447
+[[DEBUG]] - 03/01/23 10:14:31 AM - minimo = -455
+[[DEBUG]] - 03/01/23 10:14:31 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:31 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:31 AM - salvataggio file { rec_03_01_23_10_14_31.wav }
+[[DEBUG]] - 03/01/23 10:14:31 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:14:34 AM - massimo = 4002
+[[DEBUG]] - 03/01/23 10:14:34 AM - minimo = -3579
+[[DEBUG]] - 03/01/23 10:14:34 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:14:37 AM - massimo = 225
+[[DEBUG]] - 03/01/23 10:14:37 AM - minimo = -250
+[[DEBUG]] - 03/01/23 10:14:37 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:14:37 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:14:37 AM - salvataggio file { rec_03_01_23_10_14_37.wav }
+[[DEBUG]] - 03/01/23 10:14:37 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:26 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:29 AM - massimo = 4052
+[[DEBUG]] - 03/01/23 10:26:29 AM - minimo = -3582
+[[DEBUG]] - 03/01/23 10:26:29 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:26:32 AM - massimo = 220
+[[DEBUG]] - 03/01/23 10:26:32 AM - minimo = -234
+[[DEBUG]] - 03/01/23 10:26:32 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:26:32 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:26:32 AM - salvataggio file { rec_03_01_23_10_26_32.wav }
+[[DEBUG]] - 03/01/23 10:26:32 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:35 AM - massimo = 4827
+[[DEBUG]] - 03/01/23 10:26:35 AM - minimo = -4178
+[[DEBUG]] - 03/01/23 10:26:35 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:26:38 AM - massimo = 233
+[[DEBUG]] - 03/01/23 10:26:38 AM - minimo = -257
+[[DEBUG]] - 03/01/23 10:26:38 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:26:38 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:26:38 AM - salvataggio file { rec_03_01_23_10_26_38.wav }
+[[DEBUG]] - 03/01/23 10:26:38 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:41 AM - massimo = 8673
+[[DEBUG]] - 03/01/23 10:26:41 AM - minimo = -6468
+[[DEBUG]] - 03/01/23 10:26:41 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:26:44 AM - massimo = 301
+[[DEBUG]] - 03/01/23 10:26:44 AM - minimo = -486
+[[DEBUG]] - 03/01/23 10:26:44 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:26:44 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:26:44 AM - salvataggio file { rec_03_01_23_10_26_44.wav }
+[[DEBUG]] - 03/01/23 10:26:44 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:47 AM - massimo = 4352
+[[DEBUG]] - 03/01/23 10:26:47 AM - minimo = -3338
+[[DEBUG]] - 03/01/23 10:26:47 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:26:50 AM - massimo = 225
+[[DEBUG]] - 03/01/23 10:26:50 AM - minimo = -258
+[[DEBUG]] - 03/01/23 10:26:50 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:26:50 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:26:50 AM - salvataggio file { rec_03_01_23_10_26_50.wav }
+[[DEBUG]] - 03/01/23 10:26:50 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:53 AM - massimo = 5129
+[[DEBUG]] - 03/01/23 10:26:53 AM - minimo = -3401
+[[DEBUG]] - 03/01/23 10:26:53 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:26:56 AM - massimo = 215
+[[DEBUG]] - 03/01/23 10:26:56 AM - minimo = -258
+[[DEBUG]] - 03/01/23 10:26:56 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:26:56 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:26:56 AM - salvataggio file { rec_03_01_23_10_26_56.wav }
+[[DEBUG]] - 03/01/23 10:26:56 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:26:59 AM - massimo = 4895
+[[DEBUG]] - 03/01/23 10:26:59 AM - minimo = -3672
+[[DEBUG]] - 03/01/23 10:26:59 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:27:02 AM - massimo = 294
+[[DEBUG]] - 03/01/23 10:27:02 AM - minimo = -257
+[[DEBUG]] - 03/01/23 10:27:02 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:27:02 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:27:02 AM - salvataggio file { rec_03_01_23_10_27_02.wav }
+[[DEBUG]] - 03/01/23 10:27:02 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:27:05 AM - massimo = 5838
+[[DEBUG]] - 03/01/23 10:27:05 AM - minimo = -5120
+[[DEBUG]] - 03/01/23 10:27:05 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:27:08 AM - massimo = 497
+[[DEBUG]] - 03/01/23 10:27:08 AM - minimo = -407
+[[DEBUG]] - 03/01/23 10:27:08 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:27:08 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:27:08 AM - salvataggio file { rec_03_01_23_10_27_08.wav }
+[[DEBUG]] - 03/01/23 10:27:08 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:27:11 AM - massimo = 6001
+[[DEBUG]] - 03/01/23 10:27:11 AM - minimo = -5382
+[[DEBUG]] - 03/01/23 10:27:11 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:27:14 AM - massimo = 553
+[[DEBUG]] - 03/01/23 10:27:14 AM - minimo = -523
+[[DEBUG]] - 03/01/23 10:27:14 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:27:14 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:27:14 AM - salvataggio file { rec_03_01_23_10_27_14.wav }
+[[DEBUG]] - 03/01/23 10:27:14 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:27:17 AM - massimo = 6577
+[[DEBUG]] - 03/01/23 10:27:17 AM - minimo = -4391
+[[DEBUG]] - 03/01/23 10:27:17 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:27:20 AM - massimo = 1356
+[[DEBUG]] - 03/01/23 10:27:20 AM - minimo = -1680
+[[DEBUG]] - 03/01/23 10:27:20 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:01 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:04 AM - massimo = 5613
+[[DEBUG]] - 03/01/23 10:32:04 AM - minimo = -5859
+[[DEBUG]] - 03/01/23 10:32:04 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:07 AM - massimo = 439
+[[DEBUG]] - 03/01/23 10:32:07 AM - minimo = -433
+[[DEBUG]] - 03/01/23 10:32:07 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:07 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:07 AM - salvataggio file { rec_03_01_23_10_32_07.wav }
+[[DEBUG]] - 03/01/23 10:32:07 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:10 AM - massimo = 6701
+[[DEBUG]] - 03/01/23 10:32:10 AM - minimo = -5948
+[[DEBUG]] - 03/01/23 10:32:10 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:13 AM - massimo = 263
+[[DEBUG]] - 03/01/23 10:32:13 AM - minimo = -255
+[[DEBUG]] - 03/01/23 10:32:13 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:13 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:13 AM - salvataggio file { rec_03_01_23_10_32_13.wav }
+[[DEBUG]] - 03/01/23 10:32:13 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:16 AM - massimo = 6134
+[[DEBUG]] - 03/01/23 10:32:16 AM - minimo = -5507
+[[DEBUG]] - 03/01/23 10:32:16 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:19 AM - massimo = 496
+[[DEBUG]] - 03/01/23 10:32:19 AM - minimo = -592
+[[DEBUG]] - 03/01/23 10:32:19 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:19 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:19 AM - salvataggio file { rec_03_01_23_10_32_19.wav }
+[[DEBUG]] - 03/01/23 10:32:19 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:22 AM - massimo = 6430
+[[DEBUG]] - 03/01/23 10:32:22 AM - minimo = -4394
+[[DEBUG]] - 03/01/23 10:32:22 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:25 AM - massimo = 238
+[[DEBUG]] - 03/01/23 10:32:25 AM - minimo = -239
+[[DEBUG]] - 03/01/23 10:32:25 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:25 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:25 AM - salvataggio file { rec_03_01_23_10_32_25.wav }
+[[DEBUG]] - 03/01/23 10:32:25 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:28 AM - massimo = 7133
+[[DEBUG]] - 03/01/23 10:32:28 AM - minimo = -4766
+[[DEBUG]] - 03/01/23 10:32:28 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:31 AM - massimo = 262
+[[DEBUG]] - 03/01/23 10:32:31 AM - minimo = -262
+[[DEBUG]] - 03/01/23 10:32:31 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:31 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:31 AM - salvataggio file { rec_03_01_23_10_32_31.wav }
+[[DEBUG]] - 03/01/23 10:32:31 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:34 AM - massimo = 5685
+[[DEBUG]] - 03/01/23 10:32:34 AM - minimo = -3779
+[[DEBUG]] - 03/01/23 10:32:34 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:37 AM - massimo = 304
+[[DEBUG]] - 03/01/23 10:32:37 AM - minimo = -382
+[[DEBUG]] - 03/01/23 10:32:37 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:37 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:37 AM - salvataggio file { rec_03_01_23_10_32_37.wav }
+[[DEBUG]] - 03/01/23 10:32:37 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:40 AM - massimo = 6694
+[[DEBUG]] - 03/01/23 10:32:40 AM - minimo = -4209
+[[DEBUG]] - 03/01/23 10:32:40 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:43 AM - massimo = 214
+[[DEBUG]] - 03/01/23 10:32:43 AM - minimo = -239
+[[DEBUG]] - 03/01/23 10:32:43 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:43 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:43 AM - salvataggio file { rec_03_01_23_10_32_43.wav }
+[[DEBUG]] - 03/01/23 10:32:43 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:46 AM - massimo = 5123
+[[DEBUG]] - 03/01/23 10:32:46 AM - minimo = -4075
+[[DEBUG]] - 03/01/23 10:32:46 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:49 AM - massimo = 287
+[[DEBUG]] - 03/01/23 10:32:49 AM - minimo = -290
+[[DEBUG]] - 03/01/23 10:32:49 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:49 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:49 AM - salvataggio file { rec_03_01_23_10_32_49.wav }
+[[DEBUG]] - 03/01/23 10:32:49 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:52 AM - massimo = 5658
+[[DEBUG]] - 03/01/23 10:32:52 AM - minimo = -3747
+[[DEBUG]] - 03/01/23 10:32:52 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:32:55 AM - massimo = 243
+[[DEBUG]] - 03/01/23 10:32:55 AM - minimo = -180
+[[DEBUG]] - 03/01/23 10:32:55 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:32:55 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:32:55 AM - salvataggio file { rec_03_01_23_10_32_55.wav }
+[[DEBUG]] - 03/01/23 10:32:55 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:32:58 AM - massimo = 4040
+[[DEBUG]] - 03/01/23 10:32:58 AM - minimo = -3024
+[[DEBUG]] - 03/01/23 10:32:58 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:33:01 AM - massimo = 774
+[[DEBUG]] - 03/01/23 10:33:01 AM - minimo = -852
+[[DEBUG]] - 03/01/23 10:33:01 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:33:04 AM - massimo = 258
+[[DEBUG]] - 03/01/23 10:33:04 AM - minimo = -195
+[[DEBUG]] - 03/01/23 10:33:04 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:33:04 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 2
+[[INFO]] - 03/01/23 10:33:04 AM - salvataggio file { rec_03_01_23_10_33_04.wav }
+[[DEBUG]] - 03/01/23 10:33:04 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:35:04 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:35:07 AM - massimo = 7540
+[[DEBUG]] - 03/01/23 10:35:07 AM - minimo = -6197
+[[DEBUG]] - 03/01/23 10:35:07 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:35:10 AM - massimo = 5968
+[[DEBUG]] - 03/01/23 10:35:10 AM - minimo = -4415
+[[DEBUG]] - 03/01/23 10:35:10 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:35:13 AM - massimo = 300
+[[DEBUG]] - 03/01/23 10:35:13 AM - minimo = -177
+[[DEBUG]] - 03/01/23 10:35:13 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:35:13 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 2
+[[INFO]] - 03/01/23 10:35:13 AM - salvataggio file { rec_03_01_23_10_35_13.wav }
+[[DEBUG]] - 03/01/23 10:35:13 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:35:53 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:35:55 AM - massimo = 4844
+[[DEBUG]] - 03/01/23 10:35:55 AM - minimo = -3891
+[[DEBUG]] - 03/01/23 10:35:55 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:35:58 AM - massimo = 183
+[[DEBUG]] - 03/01/23 10:35:58 AM - minimo = -212
+[[DEBUG]] - 03/01/23 10:35:58 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:35:58 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:35:58 AM - salvataggio file { rec_03_01_23_10_35_58.wav }
+[[DEBUG]] - 03/01/23 10:35:58 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:01 AM - massimo = 7005
+[[DEBUG]] - 03/01/23 10:36:01 AM - minimo = -5229
+[[DEBUG]] - 03/01/23 10:36:01 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:36:04 AM - massimo = 190
+[[DEBUG]] - 03/01/23 10:36:04 AM - minimo = -277
+[[DEBUG]] - 03/01/23 10:36:04 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:36:04 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:36:04 AM - salvataggio file { rec_03_01_23_10_36_04.wav }
+[[DEBUG]] - 03/01/23 10:36:04 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:07 AM - massimo = 5094
+[[DEBUG]] - 03/01/23 10:36:07 AM - minimo = -3491
+[[DEBUG]] - 03/01/23 10:36:07 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:36:10 AM - massimo = 472
+[[DEBUG]] - 03/01/23 10:36:10 AM - minimo = -439
+[[DEBUG]] - 03/01/23 10:36:10 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:36:10 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:36:10 AM - salvataggio file { rec_03_01_23_10_36_10.wav }
+[[DEBUG]] - 03/01/23 10:36:10 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:13 AM - massimo = 5482
+[[DEBUG]] - 03/01/23 10:36:13 AM - minimo = -4857
+[[DEBUG]] - 03/01/23 10:36:13 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:36:16 AM - massimo = 175
+[[DEBUG]] - 03/01/23 10:36:16 AM - minimo = -206
+[[DEBUG]] - 03/01/23 10:36:16 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:36:16 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:36:16 AM - salvataggio file { rec_03_01_23_10_36_16.wav }
+[[DEBUG]] - 03/01/23 10:36:16 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:19 AM - massimo = 4411
+[[DEBUG]] - 03/01/23 10:36:19 AM - minimo = -3812
+[[DEBUG]] - 03/01/23 10:36:19 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:36:22 AM - massimo = 179
+[[DEBUG]] - 03/01/23 10:36:22 AM - minimo = -184
+[[DEBUG]] - 03/01/23 10:36:22 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:36:22 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:36:22 AM - salvataggio file { rec_03_01_23_10_36_22.wav }
+[[DEBUG]] - 03/01/23 10:36:22 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:25 AM - massimo = 3935
+[[DEBUG]] - 03/01/23 10:36:25 AM - minimo = -3158
+[[DEBUG]] - 03/01/23 10:36:25 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:36:28 AM - massimo = 163
+[[DEBUG]] - 03/01/23 10:36:28 AM - minimo = -184
+[[DEBUG]] - 03/01/23 10:36:28 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:36:28 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:36:28 AM - salvataggio file { rec_03_01_23_10_36_28.wav }
+[[DEBUG]] - 03/01/23 10:36:28 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:31 AM - massimo = 5394
+[[DEBUG]] - 03/01/23 10:36:31 AM - minimo = -4076
+[[DEBUG]] - 03/01/23 10:36:31 AM - buffer non vuoto, concatenazione completata
+[[DEBUG]] - 03/01/23 10:36:34 AM - massimo = 161
+[[DEBUG]] - 03/01/23 10:36:34 AM - minimo = -176
+[[DEBUG]] - 03/01/23 10:36:34 AM - blocco "vuoto", contatore_giri_a_vuoto++
+[[DEBUG]] - 03/01/23 10:36:34 AM - blocchi audio minori della soglia rumore = 1 contatore blocchi buffer = 1
+[[INFO]] - 03/01/23 10:36:34 AM - salvataggio file { rec_03_01_23_10_36_34.wav }
+[[DEBUG]] - 03/01/23 10:36:34 AM - avvio funzione __get_registrazione
+[[DEBUG]] - 03/01/23 10:36:37 AM - massimo = 528
+[[DEBUG]] - 03/01/23 10:36:37 AM - minimo = -426
+[[DEBUG]] - 03/01/23 10:36:37 AM - blocco "vuoto", contatore_giri_a_vuoto++

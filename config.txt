@@ -1,0 +1,1 @@
+{"api_key": "5774818804:AAHuWnTwdPV0n4tLNN3fLQ5AVp7AzbAXnXI", "user_id": "434316147", "stato_sveglia": false, "orario_sveglia": "10:00"}

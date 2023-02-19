@@ -1,6 +1,7 @@
 django
-python-telegram-bot == 20.0a0
+python-telegram-bot==20.0a0
 sounddevice
 soundfile
 numpy
 schedule
+stt
