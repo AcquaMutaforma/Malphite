@@ -9,3 +9,7 @@ test_passiva/
 STT_MODEL_ITA/
 
 prove_aley/
+
+mysite/Malphite/migrations/
+
+logs/

@@ -1,18 +1,17 @@
 from django.forms import model_to_dict
 from django.shortcuts import render
-from models import Settings
 from .forms import SettingsForm
 from django.http import HttpResponse, JsonResponse
-from rest_framework import status
+#from rest_framework import status
 
-import risposte_handler
-from models import Risposta
+from .models import Risposta, Settings
 
 
 def index(request):
-    pass
+    return render(request, 'index.html')
 
 
+"""
 def alarm(request, id):
     # return HttpResponse("Hello, world. You're at the polls index.")
     if request.method == 'POST':
@@ -33,18 +32,23 @@ def alarm(request, id):
             return JsonResponse({'message': 'The tutorial does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         return render(request, 'index.html', {'form': form, 'url': "/settings/" + str(setting.id)})
+"""
 
 
 def risposte(request):
+    """Pagina per visualizzare/aggiungere/rimuovere le risposte registrate dell'addetto """
     lista_risposte = Risposta.objects.all()
     context = {'lista_risposte': lista_risposte}
-    return render(request, 'Malphite/risposte.html', context)
+    return render(request, 'risposte.html', context)
 
 
 def elimina(request, idr):
-    risposte_handler.rimuovi_risposta(idr)
+    """ TODO: Ho dimenticato a cosa serviva"""
+    Risposta.objects.get(idr=idr).remove()
     return risposte(request)
 
 
 def chiediElimina(request, idr):
-    return render(request, 'Malphite/chiedi-elimina.html', {'risposta': risposte_handler.get_risposta_by_idr(idr)})
+    """Pagina per confermare la cancellazione della risposta registrata,
+        comprende anche la visualizzazione di dettagli extra"""
+    return render(request, 'Malphite/chiedi-elimina.html', {'risposta': Risposta.objects.get(idr=idr)})

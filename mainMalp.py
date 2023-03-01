@@ -6,7 +6,7 @@ import output_handler as out
 #import botTelegram
 
 # django
-#import risposte_handler as rh
+import risposte_handler as rh
 
 # spech to text
 import stt
@@ -17,8 +17,7 @@ ATTIVA = True
 PASSIVA = False
 
 
-def main(MODALITA=ATTIVA):
-    # TODO: aggiungere la gestione di argomenti da linea di comando. Modalità default = passiva
+def main(MODALITA=PASSIVA):
     try:
         if MODALITA:
             try:
@@ -85,20 +84,16 @@ def __get_registrazione(registratore, numero_secondi=3):
     contatore_buffer = 0
     max_giri = 2  # ovvero al massimo sono 6 secondi di audio (numero_secondi * max_giri)
     while True:
-
         solo_rumore = True
         tmp, _ = registratore.read(rg.frequency * numero_secondi)
-
         """# Utile per il debug - inserisce nel file log i valori registrati
         massimo_valore = 0
         minimo_valore = 0"""
-
         for x in tmp.tolist():  # ogni elemento e' una lista con (value, channel) quindi ([0],[1]), ([0],[1]) etc..
             valore = x[0]
             if abs(valore) > rg.soglia_y:
                 solo_rumore = False
-        """
-            if valore > massimo_valore:
+        """if valore > massimo_valore:
                 massimo_valore = valore
             if valore < minimo_valore:
                 minimo_valore = valore
@@ -118,7 +113,6 @@ def __get_registrazione(registratore, numero_secondi=3):
             contatore_buffer += 1
             contatore_giri_a_vuoto = 0
             print(str(contatore_buffer))
-
         if (contatore_giri_a_vuoto >= max_giri_a_vuoto and contatore_buffer > 0) or contatore_buffer > max_giri:
             log.logDebug('blocchi audio minori della soglia rumore = ' + str(contatore_giri_a_vuoto) +
                          ' contatore blocchi buffer = ' + str(contatore_buffer))

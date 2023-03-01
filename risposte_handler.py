@@ -1,4 +1,4 @@
-from risposta_model import Risposta, Keyword
+from mysite.Malphite.models import Risposta, Keyword
 
 
 def __aggiungi_risposta_alla_keyword(keyword: str, idRisposta: int):
@@ -35,6 +35,6 @@ def aggiungi_risposta(nome: str, percorsoFile: str, keywords: ()):
 
 
 def rimuovi_risposta(idRisposta: int):
-    toRemove = Risposta.objects.get(idr=idRisposta)
+    toRemove = get_risposta_by_idr(idRisposta)
     toRemove.remove()
     __flush_keyword_senza_risposte()
