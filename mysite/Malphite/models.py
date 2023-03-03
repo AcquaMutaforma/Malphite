@@ -1,11 +1,9 @@
 from django.db import models
 
 
-# Create your models here.
 class Settings(models.Model):
-    idS = models.BigAutoField(primary_key=True)
     Alarm = models.TimeField()
-    codiceUserTelegram = models.CharField(max_length=9)
+    codiceUserTelegram = models.CharField(max_length=9, null=True)
 
 
 class Risposta(models.Model):

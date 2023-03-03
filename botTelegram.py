@@ -14,6 +14,9 @@ application = Application.builder().token(api_key).build()
 def invia_audio(filename: str, testo: str):
     global application
     user_id = conf.get_userId()
+    if len(user_id) < 9:
+        log.logError("ID utente Telegram < 9, forse non e' stato inserito")
+        return
     application.Bot.send_message(chat_id=user_id, text="Richiesta non gestita")
     application.Bot.send_audio(chat_id=user_id, audio=open(filename, 'rb'))
     application.Bot.send_message(chat_id=user_id, text="Testo compreso: "+testo)

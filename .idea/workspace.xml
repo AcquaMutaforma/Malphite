@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45feea7a-46fb-4763-a6d8-3cd0dc58f082" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/Malphite/Templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/Malphite/funzioni.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/risposteHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/sveglia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainMalp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/aggiungi-risposta.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/Templates/aggiungi-risposta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/chiedi-elimina.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/Templates/chiedi-elimina.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/risposte.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/Templates/risposte.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/malp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risposta_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/risposte_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/risposte_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traduttore.py" beforeDir="false" afterPath="$PROJECT_DIR$/traduttore_DEL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botTelegram.py" beforeDir="false" afterPath="$PROJECT_DIR$/botTelegram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainMalp.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainMalp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/Malphite/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/Malphite/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/Malphite/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/Malphite/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risposte_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/risposte_handler_OLD.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +57,7 @@
       <recent name="C:\Users\Aley\Desktop\Malphite\logs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mainMalp">
+  <component name="RunManager" selected="Python.risposteHandler">
     <configuration name="botTelegram (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Malp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,8 +142,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="risposteHandler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Malp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/risposteHandler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.risposteHandler" />
         <item itemvalue="Python.botTelegram (1)" />
         <item itemvalue="Python.echobot" />
         <item itemvalue="Python.botTelegram" />

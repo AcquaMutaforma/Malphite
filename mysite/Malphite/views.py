@@ -5,13 +5,15 @@ from django.http import HttpResponse, JsonResponse
 #from rest_framework import status
 
 from .models import Risposta, Settings
+from . import funzioni
 
 
 def index(request):
     return render(request, 'index.html')
 
 
-"""
+# todo: aggiungere a index
+""" 
 def alarm(request, id):
     # return HttpResponse("Hello, world. You're at the polls index.")
     if request.method == 'POST':
@@ -42,13 +44,12 @@ def risposte(request):
     return render(request, 'risposte.html', context)
 
 
-def elimina(request, idr):
-    """ TODO: Ho dimenticato a cosa serviva"""
-    Risposta.objects.get(idr=idr).remove()
-    return risposte(request)
-
-
 def chiediElimina(request, idr):
     """Pagina per confermare la cancellazione della risposta registrata,
         comprende anche la visualizzazione di dettagli extra"""
     return render(request, 'Malphite/chiedi-elimina.html', {'risposta': Risposta.objects.get(idr=idr)})
+
+
+def eliminaConfermato(request, idr):
+    funzioni.rimuovi_risposta(idr)
+    return index(request)

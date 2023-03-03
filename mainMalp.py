@@ -6,7 +6,7 @@ import output_handler as out
 #import botTelegram
 
 # django
-import risposte_handler as rh
+import risposteHandler as rh
 
 # spech to text
 import stt
@@ -61,19 +61,18 @@ def modAttiva(model):
         frase = model.stt(np.frombuffer(temporaneo, dtype=np.int16))
         # se non trovo una risposta, creo il file audio con il buffer temporaneo, lo invio insieme
         # alla traduzione all'addetto con il bot telegram
-        # todo: test
-        print(f"La frase compresa dal model è: {frase}")
-        exit(0)
-        # todo: fino a qua
+
+        log.logDebug(f"La frase compresa dal model è: {frase}")
+
         if not __decidere(frase):
             nome_file = fh.audio_to_file(rg.frequency, temporaneo)
             try:
-                # todo: RIMETTERE QUESTO PEZZO APPENA FINITI I TEST |  botTelegram.invia_audio(nome_file, frase)
+                # todo: RIMETTERE QUESTO PEZZO APPENA FINITI I TEST -->  botTelegram.invia_audio(nome_file, frase)
                 log.logInfo("\nRisposta non trovata. Domanda compresa = [" + frase + "]. File = [" +
                             nome_file + "]")
             except Exception:
                 log.logError("\nInvio del file non compreso fallito")
-        break # per un solo ciclo
+        break  # per un solo ciclo
 
 
 def __get_registrazione(registratore, numero_secondi=3):
@@ -148,10 +147,9 @@ def __decidere(frase: str):
     # e' possibile che ci siano piu risposte valide o nessuna, non sapendo quale sia quella corretta mandiamo tutto
     # all'operatore tramite telegram
     if unico and (idRisposta != 0):
-        out.riproduci_audio(rh.get_risposta_by_idr(idrisposta=idRisposta).percorsoFile)
+        risposta = rh.get_risposta_by_idr(idrisposta=idRisposta)
+        out.riproduci_audio(str(risposta[2]) + "/" + str(risposta[1]))
+        #  2 = percorso file, 1 = nome file
         return True
     else:
         return False
-
-
-main()
