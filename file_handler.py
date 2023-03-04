@@ -1,4 +1,3 @@
-import json
 import time
 import logManager as log
 from datetime import date
@@ -60,9 +59,10 @@ def apri_audio_risposta(nome_file: str):
     return None
 
 
-# todo: delete, ho dimenticato per quale motivo sia stato creato
+# todo: delete, abbiamo cambiato metodo
+"""
 def add_audio_risposta(nuovo_nome: str, registrazione: str):
-    """SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto"""
+    # SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto
     try:
         destinazione = cartella_risposte + "/" + nuovo_nome
         sorgente = os.fspath(registrazione)
@@ -74,41 +74,4 @@ def add_audio_risposta(nuovo_nome: str, registrazione: str):
         print("[File_H] - File registrazione non trovato")
     except Exception:
         print("[File_H] - Errore indefinito per aggiungere/modificare registrazione :(")
-
-
-"""def modifica_audio_risposta(nome_file: str, registrazione: str):
-    add_audio_risposta(nome_file, registrazione)"""
-
-
-def __leggi_config() -> {}:
-    # todo: inserire un controllo sulla correttezza dei dati
-    try:
-        f = open("config.txt", 'r')
-        to_ret = json.load(f)
-        f.close()
-        return to_ret
-    except FileNotFoundError:
-        f = open("config.txt", 'w')
-        f.write(json.dumps({
-            'api_key': '',
-            'user_id': '',
-            'model_filename': 'modello',
-            'stato_sveglia': False,
-            'orario_sveglia': ''}))
-        f.close()
-    return {
-        'api_key': '',
-        'user_id': '',
-        'model_filename': 'modello',  # e' di troppo, ma per i test potrebbe essere comodo
-        'stato_sveglia': False,
-        'orario_sveglia': ''}
-
-
-CONFIG = __leggi_config()
-
-
-def scrivi_config():
-    f = open("config.txt", 'w')
-    f.write(json.dumps(CONFIG))
-    f.close()
-
+"""

@@ -1,21 +1,16 @@
-"""
-Questo Modulo viene inserito nel framework DJANGO, una volta attivato, avvia anche questo modulo.
-"""
 import schedule
 import output_handler as out
-import configManager
+import configManager as conf
 
 
-def crea_sveglia(orario: str):
+def __crea_sveglia(orario: str):
+    # Formato = hh:mm, il default del file config e' 10:00
     return schedule.every().day.at(orario).do(__suona_sveglia())
 
 
-configurazione = configManager.CONFIG
-STATO_SVEGLIA = False
-EVENTO_SVEGLIA = None
-if configurazione is not None:
-    STATO_SVEGLIA = configurazione['stato_sveglia']
-    EVENTO_SVEGLIA = crea_sveglia(configurazione['orario_sveglia'])
+STATO_SVEGLIA = conf.get_statoSveglia()
+ORARIO_SVEGLIA = conf.get_orarioSveglia()
+EVENTO_SVEGLIA = __crea_sveglia(ORARIO_SVEGLIA)
 
 
 def __suona_sveglia():
@@ -32,3 +27,9 @@ def sveglia_attiva():
 def sveglia_spenta():
     global STATO_SVEGLIA
     STATO_SVEGLIA = False
+
+
+def modificaSveglia(orario: str):
+    global EVENTO_SVEGLIA
+    #todo : aggiungere la modifica nella config x tutte le funzioni
+    EVENTO_SVEGLIA = __crea_sveglia(orario)

@@ -1,6 +1,9 @@
 from django.forms import model_to_dict
 from django.shortcuts import render
-from .forms import SettingsForm
+
+import sveglia
+import configManager as conf
+from . import forms
 from django.http import HttpResponse, JsonResponse
 #from rest_framework import status
 
@@ -9,7 +12,10 @@ from . import funzioni
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {'stato_sveglia': sveglia.STATO_SVEGLIA, 'orario_sveglia': sveglia.ORARIO_SVEGLIA,
+               'user_id': conf.get_userId(), 'formOrario': forms.SvegliaForm(),
+               'formUser': forms.UserForm()}
+    return render(request, 'index.html', context)
 
 
 # todo: aggiungere a index
@@ -44,12 +50,35 @@ def risposte(request):
     return render(request, 'risposte.html', context)
 
 
+def aggiungiRisposta(request):
+    pass
+
+
 def chiediElimina(request, idr):
-    """Pagina per confermare la cancellazione della risposta registrata,
-        comprende anche la visualizzazione di dettagli extra"""
+    """Pagina per confermare la cancellazione della risposta registrata"""
     return render(request, 'Malphite/chiedi-elimina.html', {'risposta': Risposta.objects.get(idr=idr)})
 
 
 def eliminaConfermato(request, idr):
     funzioni.rimuovi_risposta(idr)
+    return index(request)
+
+
+def attivaSveglia(request):
+    sveglia.sveglia_attiva()
+    return index(request)
+
+
+def spegniSveglia(request):
+    sveglia.sveglia_spenta()
+    return index(request)
+
+
+def modificaSveglia(request, orario):
+    sveglia.modificaSveglia(orario)
+    return index(request)
+
+
+def modificaUserId(request, user):
+    conf.set_userId(user)
     return index(request)

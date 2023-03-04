@@ -1,0 +1,1 @@
+# todo: avvio sveglia e "main" del bot

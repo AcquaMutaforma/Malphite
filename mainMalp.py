@@ -3,7 +3,7 @@ import logManager as log
 import file_handler as fh
 import numpy as np
 import output_handler as out
-#import botTelegram
+import botTelegram
 
 # django
 import risposteHandler as rh
@@ -37,12 +37,13 @@ def main(MODALITA=PASSIVA):
 def modPassiva():
     registratore = rg.get_audio_stream()
     registratore.start()
+    log.logDebug("Inzio registrazione MOD ATTIVA")
     fh.cartella_registrazioni = 'test_passiva/'
     print("Inserisci la frase che dirai e premi invio> ")
     frase = input()
     while True:
-        print("Premi invio per registrare, per uscire usa CTRL + C")
-        input()
+        print("Premi un tasto per registrare, per uscire usa CTRL + C")
+        input()  # se preme CTRL + C, il try-catch del main() termina l'esecuzione
         print("recording..")
         audio_filename = fh.audio_to_file(rg.frequency, __get_registrazione(registratore=registratore))
         log.logInfo("salvataggio file { " + audio_filename + " }")
@@ -61,18 +62,16 @@ def modAttiva(model):
         frase = model.stt(np.frombuffer(temporaneo, dtype=np.int16))
         # se non trovo una risposta, creo il file audio con il buffer temporaneo, lo invio insieme
         # alla traduzione all'addetto con il bot telegram
-
         log.logDebug(f"La frase compresa dal model è: {frase}")
-
-        if not __decidere(frase):
+        if __decidere(frase):
             nome_file = fh.audio_to_file(rg.frequency, temporaneo)
             try:
-                # todo: RIMETTERE QUESTO PEZZO APPENA FINITI I TEST -->  botTelegram.invia_audio(nome_file, frase)
+                botTelegram.invia_audio(nome_file, frase)
                 log.logInfo("\nRisposta non trovata. Domanda compresa = [" + frase + "]. File = [" +
                             nome_file + "]")
             except Exception:
                 log.logError("\nInvio del file non compreso fallito")
-        break  # per un solo ciclo
+        # break  # per un solo ciclo
 
 
 def __get_registrazione(registratore, numero_secondi=3):
@@ -147,9 +146,11 @@ def __decidere(frase: str):
     # e' possibile che ci siano piu risposte valide o nessuna, non sapendo quale sia quella corretta mandiamo tutto
     # all'operatore tramite telegram
     if unico and (idRisposta != 0):
+        # Riproduco audio risposta
         risposta = rh.get_risposta_by_idr(idrisposta=idRisposta)
         out.riproduci_audio(str(risposta[2]) + "/" + str(risposta[1]))
         #  2 = percorso file, 1 = nome file
-        return True
+        return False  # Non serve mandare un messaggio telegram
     else:
-        return False
+        # Non ho trovato la risposta =( -> serve un messaggio telegram
+        return True

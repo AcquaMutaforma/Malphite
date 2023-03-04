@@ -1,9 +1,6 @@
 """
-Classe che gestisce l'input audio
-Responsabilita' :
-Catturare audio in input
+Modulo che gestisce l'input audio
 """
-
 import sounddevice as sd
 import file_handler
 import logManager as log
@@ -20,7 +17,7 @@ myrecording = sd.rec(int(duration * frequency))
 frequency = 16000  # Sampling frequency = frequenza campionamento
 sd.default.samplerate = frequency
 sd.default.channels = 1
-soglia_y = 800  # soglia audio di sottofondo
+soglia_y = 800  # soglia rumore, i valori più bassi non sono una persona che parla
 
 
 # old
@@ -44,4 +41,3 @@ def get_audio_stream():
         return sd.InputStream(samplerate=frequency, channels=1, dtype='int16')  # parte da solo? booh
     except Exception as e:
         log.logError("Errore input stream = {" + str(e) + "}")
-

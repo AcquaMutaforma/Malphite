@@ -1,5 +1,5 @@
 """
-Script di appoggio per elaborazione file CSV utile al training della rete neurale.
+Script di appoggio per elaborazione file CSV utilizzato per il training della IA.
 
 Per comodità registriamo a blocchi la stessa frase, inseriamo nel file CSV i dati dei file audio registrati e la
 loro traduzione. In questo modo la fase di testing è più veloce, dato che non si ha la necessità di riascoltare ogni

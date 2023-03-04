@@ -15,18 +15,12 @@ def invia_audio(filename: str, testo: str):
     global application
     user_id = conf.get_userId()
     if len(user_id) < 9:
-        log.logError("ID utente Telegram < 9, forse non e' stato inserito")
+        log.logError("ID utente Telegram < 9, errore di inserimento?")
         return
     application.Bot.send_message(chat_id=user_id, text="Richiesta non gestita")
     application.Bot.send_audio(chat_id=user_id, audio=open(filename, 'rb'))
     application.Bot.send_message(chat_id=user_id, text="Testo compreso: "+testo)
-    log.logInfo(f"Inviato audio {filename} non compreso, testo compreso = {testo}")
-
-    # TODO: fare il loop "while true" per la risposta audio
-    id_messaggio = application.Bot.get_updates().message.voice.file_id
-    application.Bot.get_file(id_messaggio).download('/ricevuti_da_telegram')
-    """DOCS @ https://docs.python-telegram-bot.org/en/v20.0a4/telegram.file.html#telegram.File """
-    # todo: controllare l'output.
+    log.logInfo(f"Inviato audio {filename} non gestito, testo compreso = {testo}")
 
 
 async def start(update: Update, context: CallbackContext) -> None:
@@ -36,14 +30,6 @@ async def start(update: Update, context: CallbackContext) -> None:
         rf"Hi {user.mention_html()}! Your id is: {str(user.id)}",
         reply_markup=ForceReply(selective=True),
     )
-
-# NOTA:: Questo meccanismo va nella web gui
-"""def __aggiorna_user_id(userid: int):
-    global config
-    global user_id
-    user_id = str(userid)
-    config['user_id'] = user_id
-    fh.scrivi_config(config)"""
 
 
 async def showid(update: Update, context: CallbackContext) -> None:
@@ -67,7 +53,13 @@ async def echo(update: Update, context: CallbackContext) -> None:
     if update.effective_user.id != conf.get_userId():
         await update.message.reply_text("Non sei collegato :<")
     else:
+        try:
+            id_messaggio = application.Bot.get_updates().message.voice.file_id
+            application.Bot.get_file(id_messaggio).download('ricevuti_da_telegram/')
+        except Exception:
+            pass
         await update.message.reply_text("ok")
+        """Documentazione @ https://docs.python-telegram-bot.org/en/v20.0a4/telegram.file.html#telegram.File """
 
 
 # on different commands - answer in Telegram
@@ -77,13 +69,6 @@ application.add_handler(CommandHandler("help", help))
 
 application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
 application.run_polling()
-
-
-# todo check se funziona
-def spegni():
-    global application
-    application.shutdown()
-    log.logInfo("segnale spegnimento bot")
 
 
 """ 
@@ -109,10 +94,4 @@ def main():
 
     bot.sendAudio(chat_id=user_id, audio=open('TelegramBot\\brobob.mp3', 'rb'))
 
-
-# Enable logging
-
-
-if __name__ == '__main__':
-    main()
 """

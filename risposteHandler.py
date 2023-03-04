@@ -36,6 +36,4 @@ INSERT INTO "Malphite_keyword" (id, keyword) VALUES (1,'test')
 INSERT INTO "Malphite_keyword_idRisposta" (id, keyword_id, risposta_id) VALUES (1, 1, 1)
 
 SELECT idr FROM "Malphite_risposta" WHERE idr IN ( SELECT risposta_id FROM "Malphite_keyword_idRisposta" WHERE keyword_id IN ( SELECT id FROM "Malphite_keyword" WHERE keyword=%s))
-
-
 """
