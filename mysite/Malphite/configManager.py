@@ -1,5 +1,5 @@
 import json
-
+from . import logManager as log
 
 def __leggi_config() -> {}:
     # todo: inserire un controllo sulla correttezza dei dati
@@ -9,6 +9,7 @@ def __leggi_config() -> {}:
         f.close()
         return to_ret
     except FileNotFoundError:
+        log.logError("Configurazione non trovata, generata la default")
         f = open("config.txt", 'w')
         default_config = {
             'api_key': '',
@@ -46,9 +47,16 @@ def get_orarioSveglia() -> str:
 
 
 def set_userId(usrid: str):
-    # todo: aggiungere controlli
-    CONFIG['user_id'] = usrid
-    scrivi_config()
+    try:
+        if len(usrid) < 9:
+            log.logDebug('USER ID < 9 !!')
+        else:
+            CONFIG['user_id'] = usrid
+            scrivi_config()
+            log.logDebug(f"Nuovo User id => [ {usrid} ]")
+    except Exception as e:
+        log.logError("Errore nel formato User ID per telegram")
+
 
 
 def sveglia_attiva():
@@ -62,6 +70,7 @@ def sveglia_spenta():
 
 
 def set_orario_sveglia(orario: str):
-    # todo: aggiungere controlli
+    if len(orario) != 5:
+        pass
     CONFIG['orario_sveglia'] = orario
     scrivi_config()

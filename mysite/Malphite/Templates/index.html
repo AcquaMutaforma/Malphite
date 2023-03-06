@@ -20,25 +20,27 @@
         <p>SVEGLIA SPENTA - impostata alle ore {{ orario_sveglia }}</p>
         <a href="{% url 'Malphite:attivaSveglia' %}"><button>ATTIVA Sveglia</button></a>
         {% endif %}
-        <form action="{% url 'Malphite:modificaSveglia' orario %}" method="post">
+        <br><br>
+        <form action="/Malphite/modificaSveglia/" method="post">
+            {% csrf_token %}
             {{ formOrario }}
             <input type="submit" value="Modifica Orario">
         </form>
-        <form action="{% url 'Malphite:modificaSveglia' orario %}" method="post">
-            {{ formOrario }}
-            <input type="submit" value="Modifica Orario">
-        </form>
+        <br>
         {% if user_id is not None %}
             <p>ID Utente Telegram collegato = {{user_id}}</p>
         {% else %}
             <p>ID Utente Telegram NON COLLEGATO =(</p>
         {% endif %}
-        <form action="{% url 'Malphite:modificaUserId' user %}" method="post">
+        <br>
+        <form action="/Malphite/modificaUserId/" method="post">
+            {% csrf_token %}
             {{ formUser }}
             <input type="submit" value="Modifica ID Utente">
         </form>
     </div>
     <div>
+        <h2>Clicca qua per gestire le risposte del CareGiverBot!</h2>
         <br>
         <a href="{% url 'Malphite:risposte' %}"><button>Pagina gestione risposte</button></a>
     </div>

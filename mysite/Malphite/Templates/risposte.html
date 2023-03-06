@@ -8,20 +8,24 @@
     <div>
         <h2>Pagina Risposte</h2>
         <br>
-        <a href="{% url 'Malphite:index' %}"><button value="Torna indietro"></button></a>
+        <a href="/Malphite/"><button value="Torna indietro">Torna alla Home</button></a>
         <br>
     </div>
+    <br>
+    <div>
+        ID - - Nome Risposta - - - -
     {% if lista_risposte %}
         <ul>
         {% for risposta in lista_risposte %}
         <li><div>{{ risposta.idr }} - {{ risposta.nome }} -
-            <a href="{% url 'Malphite:chiedi-elimina' risposta.idr %}">
-                <button value="Elimina"></button>
+            <a href="{% url 'Malphite:chiediElimina' risposta.idr %}">
+                <button value="Elimina">Elimina</button>
             </a></div></li>
         {% endfor %}
         </ul>
     {% else %}
     <p><h4>Non sono presenti delle risposte >.< </h4></p>
     {% endif %}
+    </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 from django.forms import model_to_dict
 from django.shortcuts import render
+from django.shortcuts import redirect
 
-import sveglia
-import configManager as conf
+from . import sveglia
+from . import configManager as conf
 from . import forms
 from django.http import HttpResponse, JsonResponse
 #from rest_framework import status
@@ -18,7 +19,6 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-# todo: aggiungere a index
 """ 
 def alarm(request, id):
     # return HttpResponse("Hello, world. You're at the polls index.")
@@ -56,29 +56,40 @@ def aggiungiRisposta(request):
 
 def chiediElimina(request, idr):
     """Pagina per confermare la cancellazione della risposta registrata"""
-    return render(request, 'Malphite/chiedi-elimina.html', {'risposta': Risposta.objects.get(idr=idr)})
+    return render(request, 'chiediElimina.html', {'risposta': Risposta.objects.get(idr=idr)})
 
 
+# Sul segnalibro "file upload django" c'è un esempio per correggere questa roba, nel caso non funziona
 def eliminaConfermato(request, idr):
     funzioni.rimuovi_risposta(idr)
-    return index(request)
+    return render(request, 'modifica_ok.html')
 
 
 def attivaSveglia(request):
     sveglia.sveglia_attiva()
-    return index(request)
+    return redirect('/Malphite/')
 
 
 def spegniSveglia(request):
     sveglia.sveglia_spenta()
-    return index(request)
+    return redirect('/Malphite/')
 
 
-def modificaSveglia(request, orario):
-    sveglia.modificaSveglia(orario)
-    return index(request)
+def modificaSveglia(request):
+    if request.method == 'POST':
+        form = forms.SvegliaForm(request.POST)
+        if form.is_valid():
+            sveglia.modificaSveglia(form.cleaned_data['Orario'])
+            return render(request, 'modifica_ok.html')
+    else:
+        return index(request)
 
 
-def modificaUserId(request, user):
-    conf.set_userId(user)
-    return index(request)
+def modificaUserId(request):
+    if request.method == 'POST':
+        form = forms.UserForm(request.POST)
+        if form.is_valid():
+            conf.set_userId(form.cleaned_data['User'])
+            return render(request, 'modifica_ok.html')
+    else:
+        return index(request)

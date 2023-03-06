@@ -1,5 +1,5 @@
 import time
-import logManager as log
+from . import logManager as log
 from datetime import date
 import os
 import soundfile as sf

@@ -5,6 +5,7 @@ from .models import Risposta, Keyword
 
 
 def __aggiungi_risposta_alla_keyword(keyword: str, idRisposta: int):
+    # todo: cercare cosa fa filter, lo ho dimenticato
     lista_oggetti_keyword = Keyword.objects.filter(keyword=keyword)  # il formato e' dictionary
     if len(lista_oggetti_keyword) < 1:
         parola = Keyword.objects.create(keyword=keyword, idRisposta=idRisposta)
@@ -30,6 +31,9 @@ def aggiungi_risposta(nome: str, percorsoFile: str, keywords: ()):
 
 
 def rimuovi_risposta(idRisposta: int):
-    toRemove = Risposta.objects.get(idRisposta)
-    toRemove.delete()
-    __flush_keyword_senza_risposte()
+    try:
+        toRemove = Risposta.objects.get(idRisposta)
+        toRemove.delete()
+        __flush_keyword_senza_risposte()
+    except Exception as e:
+        pass

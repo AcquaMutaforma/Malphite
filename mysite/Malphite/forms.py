@@ -10,8 +10,14 @@ class SettingsForm(forms.Form):
 
 
 class SvegliaForm(forms.Form):
-    Orario = forms.Textarea()
+    Orario = forms.CharField(label='Orario', max_length=10)
 
 
 class UserForm(forms.Form):
-    User = forms.Textarea()
+    User = forms.CharField(label='User', max_length=15)
+
+
+class RispostaForm(forms.Form):
+    Nome = forms.CharField(label='Nome', max_length=150)
+    FileAudio = forms.FileField()
+    Keywords = forms.CharField(label='Keywords', max_length=150)

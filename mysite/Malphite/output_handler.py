@@ -1,6 +1,6 @@
 import sounddevice as sd
-import file_handler
-import logManager as log
+from . import file_handler
+from . import logManager as log
 
 
 def riproduci_audio(nome_file: str):
@@ -14,3 +14,7 @@ def riproduci_audio(nome_file: str):
         log.logError(f'riproduzione audio ["{nome_file}"] fallita :' + e.strerror)
     except FileExistsError as e:
         log.logError(f'riproduzione audio ["{nome_file}"] fallita :' + e.strerror)
+
+
+def suonaSveglia():
+    riproduci_audio('sveglia.wav')
