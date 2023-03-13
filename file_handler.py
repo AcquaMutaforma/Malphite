@@ -1,10 +1,10 @@
 import time
-from . import logManager as log
+import mysite.Malphite.logManager as log
 from datetime import date
 import os
 import soundfile as sf
 
-cartella_registrazioni = "audio_richieste/"
+cartella_registrazioni = "modPassiva/"
 cartella_risposte = "risposte_registrate/"
 
 
@@ -57,3 +57,21 @@ def apri_audio_risposta(nome_file: str):
     except Exception:
         print("[File_H] - Errore indefinito in apertura audio :(")
     return None
+
+
+# todo: delete, abbiamo cambiato metodo
+"""
+def add_audio_risposta(nuovo_nome: str, registrazione: str):
+    # SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto
+    try:
+        destinazione = cartella_risposte + "/" + nuovo_nome
+        sorgente = os.fspath(registrazione)
+        os.replace(sorgente, destinazione)
+        print("[File_H] - Registrazione risposta aggiunta correttamente")
+    except PermissionError:
+        print("[File_H] - Errore permessi per aggiungere/modificare file audio")
+    except FileNotFoundError:
+        print("[File_H] - File registrazione non trovato")
+    except Exception:
+        print("[File_H] - Errore indefinito per aggiungere/modificare registrazione :(")
+"""

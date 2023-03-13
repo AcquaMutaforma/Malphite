@@ -1,5 +1,5 @@
 import registratore as rg
-import logManager as log
+import mysite.Malphite.logManager as log
 import file_handler as fh
 import numpy as np
 import output_handler as out
@@ -39,7 +39,6 @@ def modPassiva():
     registratore = rg.get_audio_stream()
     registratore.start()
     log.logDebug("Inzio registrazione MOD ATTIVA")
-    fh.cartella_registrazioni = 'test_passiva/'
     print("Inserisci la frase che dirai e premi invio> ")
     frase = input()
     while True:

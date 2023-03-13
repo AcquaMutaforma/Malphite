@@ -1,10 +1,9 @@
 from telegram import Update, ForceReply
 from telegram.ext import CallbackContext, MessageHandler, filters, Application, CommandHandler
 
-import configManager as conf
-import logManager as log
+import mysite.Malphite.configManager as conf
+import mysite.Malphite.logManager as log
 import output_handler
-import file_handler as fh
 
 api_key = conf.get_apiKey()
 if api_key.__len__() < 8:
@@ -52,12 +51,13 @@ async def help(update: Update, context: CallbackContext) -> None:
 
 async def echo(update: Update, context: CallbackContext) -> None:
     """Echo the user message."""
-    if update.effective_user.id != conf.get_userId():
-        await update.message.reply_text("Non sei collegato :<")
+    if str(update.effective_user.id) != conf.get_userId():
+        await update.message.reply_text("Non sei collegato :< --" + conf.get_userId())
     else:
+        await update.message.reply_text("hey! ciao " + conf.get_userId())
         try:
             id_messaggio = application.Bot.get_updates().message.voice.file_id
-            percorso = '/ricevuti_da_telegram/tmp.wav'
+            percorso = 'ricevutiTelegram/tmp.wav'
             application.Bot.get_file(id_messaggio).download(custom_path=percorso)
             output_handler.riproduci_audio(percorso)
             # fh.elimina_audio(percorso)
@@ -73,7 +73,7 @@ application.add_handler(CommandHandler("myid", showid))
 application.add_handler(CommandHandler("help", help))
 
 application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
-application.run_polling()
+application.run_polling(stop_signals=None)
 
 
 """ 

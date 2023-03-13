@@ -1,5 +1,5 @@
 import psycopg2
-import logManager as log
+import mysite.Malphite.logManager as log
 
 dbname = 'postgres'
 user = 'postgres'

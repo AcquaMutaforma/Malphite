@@ -8,8 +8,8 @@ audio registrato per inserire la sua traduzione manualmente nel file.
 Ovviamente i files già inseriti nel file CSV vengono ignorati, così da non sovrascriveli.
 Una volta elaborati
 """
-import logManager as log
-cartella_files = "test_passiva/"
+import mysite.Malphite.logManager as log
+cartella_files = "modPassiva/"
 
 
 def addLineToCSV(filename: str, grandezza: int, frase: str):

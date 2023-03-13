@@ -3,7 +3,7 @@ Modulo che gestisce l'input audio
 """
 import sounddevice as sd
 import file_handler
-import logManager as log
+import mysite.Malphite.logManager as log
 import numpy as np
 
 """

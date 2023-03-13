@@ -1,5 +1,6 @@
 import json
-from . import logManager as log
+import logManager as log
+
 
 def __leggi_config() -> {}:
     # todo: inserire un controllo sulla correttezza dei dati
