@@ -19,5 +19,5 @@ class UserForm(forms.Form):
 
 class RispostaForm(forms.Form):
     Nome = forms.CharField(label='Nome', max_length=150)
-    FileAudio = forms.FileField()
+    FileAudio = forms.FileField(error_messages={'required': 'inserire il file :<'})
     Keywords = forms.CharField(label='Keywords', max_length=150)

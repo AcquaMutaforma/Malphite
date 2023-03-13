@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aggiungi Risposta</title>
+</head>
+<body>
+    <div>
+        <h2>Aggiungi Risposta</h2>
+        <hr>
+    </div>
+    <div>
+        Inserisci i dati per aggiungere una nuova risposta al CareGiverBot !<br><br>
+        <form action="/Malphite/aggiungiRisposta/" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Aggiungi risposta">
+        </form>
+    </div>
+    <div><br>
+        Oppure <a href="/Malphite/"><button value="Torna indietro">Torna alla Home</button></a>
+    </div>
+</body>
+</html>

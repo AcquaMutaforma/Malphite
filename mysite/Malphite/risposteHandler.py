@@ -19,9 +19,9 @@ def get_risposta_by_idr(idrisposta: int):
         log.logError(f"[risposteHandler] - connessione DB - {e}")
 
 
-def get_idrisposte_con_keyword(keyword: str):
+def get_idrisposte_con_keyword(keyword: str) -> ():
     connessione = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port).cursor()
-    connessione.execute('(SELECT idr FROM "Malphite_risposta" WHERE idr IN ( SELECT risposta_id FROM "Malphite_keyword_idRisposta" WHERE keyword_id IN ( SELECT id FROM "Malphite_keyword" WHERE keyword = %s)))', (str(keyword),))
+    connessione.execute('(SELECT idr FROM "Malphite_risposta" WHERE idr IN ( SELECT idRisposta_id FROM "Malphite_relazione" WHERE idKeyword_id IN ( SELECT id FROM "Malphite_keyword" WHERE keyword = %s)))', (str(keyword),))
     try:
         return connessione.fetchone()
     except ConnectionError as e:

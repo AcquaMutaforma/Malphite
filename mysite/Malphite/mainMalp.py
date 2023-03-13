@@ -13,6 +13,7 @@ import stt
 import csv_creator
 import os
 
+# Per comodità
 ATTIVA = True
 PASSIVA = False
 

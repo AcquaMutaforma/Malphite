@@ -17,6 +17,12 @@ class Risposta(models.Model):
 class Keyword(models.Model):
     # idRisposta = models.ForeignKey(Risposta, on_delete=models.CASCADE)
     # Non sono sicuro di usare questo perche' ho piu risposte per ogni keyword
+    def __str__(self):  # Per i test questo metodo consente di visualizzare l'oggetto invece del suo id a runtime
+        return self.keyword
     id = models.BigAutoField(primary_key=True)
     keyword = models.CharField(max_length=150)
-    idRisposta = models.ManyToManyField(Risposta)
+
+
+class Relazione(models.Model):
+    idRisposta = models.ForeignKey(Risposta, on_delete=models.CASCADE)
+    idKeyword = models.ForeignKey(Keyword, on_delete=models.CASCADE)

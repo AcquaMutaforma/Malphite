@@ -8,7 +8,7 @@ from . import forms
 from django.http import HttpResponse, JsonResponse
 #from rest_framework import status
 
-from .models import Risposta, Settings
+from .models import Risposta, Relazione, Keyword
 from . import funzioni
 
 
@@ -51,12 +51,40 @@ def risposte(request):
 
 
 def aggiungiRisposta(request):
-    pass
+    if request.method == 'POST':
+        form = forms.RispostaForm(request.POST, request.FILES)
+        if form.is_valid():
+            nome = form.cleaned_data['Nome']
+            path = gestioneFileCaricato(request.FILES['FileAudio'], nome)
+            funzioni.aggiungi_risposta(nome, path, form.cleaned_data['Keywords'])
+            return render(request, 'modifica_ok.html')
+        else:
+            return render(request, 'invalid.html')
+    else:
+        return render(request, 'aggiungiRisposta.html', {'form': forms.RispostaForm})
+
+
+def gestioneFileCaricato(f, nome: str):
+    try:
+        percorso = 'risposteRegistrate/' + nome + ".wav"
+        with open(percorso, 'wb+') as destinazione:
+            for chunk in f.chunks():
+                destinazione.write(chunk)
+        return percorso
+    except PermissionError:
+        pass
 
 
 def chiediElimina(request, idr):
     """Pagina per confermare la cancellazione della risposta registrata"""
-    return render(request, 'chiediElimina.html', {'risposta': Risposta.objects.get(idr=idr)})
+    risposta = Risposta.objects.get(idr=idr)
+    tutte = Relazione.objects.filter(idRisposta=risposta.idr)
+    lista = []
+    for x in tutte:
+        tmp = x.idKeyword
+        lista.append(Keyword.objects.get(id=tmp.id).__str__)
+    return render(request, 'chiediElimina.html', {'risposta': risposta,
+                                                  'lista_keywords': lista})
 
 
 # Sul segnalibro "file upload django" c'è un esempio per correggere questa roba, nel caso non funziona

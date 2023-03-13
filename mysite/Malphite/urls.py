@@ -5,6 +5,7 @@ app_name = "Malphite"
 urlpatterns = [
     path('', views.index, name='index'),
     path('risposte/', views.risposte, name='risposte'),
+    path('aggiungiRisposta/', views.aggiungiRisposta, name='aggiungiRisposta'),
     path('chiediElimina/<idr>', views.chiediElimina, name='chiediElimina'),
     path('eliminaConfermato/<idr>', views.eliminaConfermato, name='eliminaConfermato'),
     path('attivaSveglia/', views.attivaSveglia, name='attivaSveglia'),

@@ -7,25 +7,32 @@
 <body>
     <div>
         <h2>Pagina Risposte</h2>
-        <br>
-        <a href="/Malphite/"><button value="Torna indietro">Torna alla Home</button></a>
-        <br>
+        <hr>
+        <div>
+            <a href="/Malphite/"><button value="Torna indietro">Torna alla Home</button></a>
+        </div>
+        <br>oppure..<br>
+        <div>
+            <a href="/Malphite/aggiungiRisposta/"><button value="">Aggiungi nuova risposta</button></a>
+        </div>
     </div>
     <br>
     <div>
+
+        Lista Delle risposte<br>
         ID - - Nome Risposta - - - -
-    {% if lista_risposte %}
-        <ul>
-        {% for risposta in lista_risposte %}
-        <li><div>{{ risposta.idr }} - {{ risposta.nome }} -
-            <a href="{% url 'Malphite:chiediElimina' risposta.idr %}">
-                <button value="Elimina">Elimina</button>
-            </a></div></li>
-        {% endfor %}
+        {% if lista_risposte %}
+            <ul>
+            {% for risposta in lista_risposte %}
+            <li><div>{{ risposta.idr }} - {{ risposta.nome }} -
+                <a href="{% url 'Malphite:chiediElimina' risposta.idr %}">
+                    <button value="Elimina">Elimina</button>
+                </a></div></li>
+            {% endfor %}
         </ul>
-    {% else %}
-    <p><h4>Non sono presenti delle risposte >.< </h4></p>
-    {% endif %}
+        {% else %}
+            <p><h4>Non sono presenti delle risposte >.< </h4></p>
+        {% endif %}
     </div>
 </body>
 </html>

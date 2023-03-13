@@ -3,6 +3,8 @@ from telegram.ext import CallbackContext, MessageHandler, filters, Application, 
 
 import configManager as conf
 import logManager as log
+import output_handler
+import file_handler as fh
 
 api_key = conf.get_apiKey()
 if api_key.__len__() < 8:
@@ -55,7 +57,10 @@ async def echo(update: Update, context: CallbackContext) -> None:
     else:
         try:
             id_messaggio = application.Bot.get_updates().message.voice.file_id
-            application.Bot.get_file(id_messaggio).download('ricevuti_da_telegram/')
+            percorso = '/ricevuti_da_telegram/tmp.wav'
+            application.Bot.get_file(id_messaggio).download(custom_path=percorso)
+            output_handler.riproduci_audio(percorso)
+            # fh.elimina_audio(percorso)
         except Exception:
             pass
         await update.message.reply_text("ok")
