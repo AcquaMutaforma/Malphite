@@ -1,9 +1,12 @@
 import registratore as rg
 import mysite.Malphite.logManager as log
-import file_handler as fh
+import mysite.Malphite.file_handler as fh
 import numpy as np
 import output_handler as out
-import botTelegram
+try:
+    import botTelegram
+except Exception as e:
+    log.logError(f"BotTelegram non avviato - {e}")
 
 # django
 import risposteHandler as rh
@@ -60,6 +63,7 @@ def modAttiva(model):
     while True:
         temporaneo = __get_registrazione(registratore=registratore)
         frase = model.stt(np.frombuffer(temporaneo, dtype=np.int16))
+        print(f"Frase compresa = [ {frase} ]")  # todo: rimuovere
         # se non trovo una risposta, creo il file audio con il buffer temporaneo, lo invio insieme
         # alla traduzione all'addetto con il bot telegram
         log.logDebug(f"La frase compresa dal model è: {frase}")
@@ -154,3 +158,6 @@ def __decidere(frase: str):
     else:
         # Non ho trovato la risposta =( -> serve un messaggio telegram
         return True
+
+
+main(ATTIVA)

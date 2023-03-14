@@ -4,7 +4,7 @@ from datetime import date
 import os
 import soundfile as sf
 
-cartella_registrazioni = "audio_richieste/"
+cartella_registrazioni = "modPassiva/"
 cartella_risposte = "risposte_registrate/"
 
 
@@ -12,8 +12,7 @@ def audio_to_file(freq, recording):
     """Questo metodo scrive la registrazione nella cartella_comando, se e' gia' presente un file
     con lo stesso nome lo sovrascrive. Tecnicamente i comandi vengono gestiti singolarmente, ma nel
     dubbio i file vengono chiamati in maniera differente con un numero random. """
-    filename = "rec" + \
-               date.today().strftime("_%d_%m_%y_") + time.strftime("%H_%M_%S", time.localtime()) + ".wav"
+    filename = "rec" + date.today().strftime("_%d_%m_%y_") + time.strftime("%H_%M_%S", time.localtime()) + ".wav"
     if recording is None or freq < 10000:
         log.logError("Scrittura file fallita, recording = None")
         return 'None'
@@ -26,8 +25,8 @@ def audio_to_file(freq, recording):
     except FileNotFoundError:
         print(f"[File_H] - Errore file not found - {cartella_registrazioni} -or- {recording.__class__}")
         return None
-    except Exception:
-        print("[File_H] - Errore indefinito - scrittura richiesta fallita :(")
+    except Exception as e:
+        print(f"[File_H] - scrittura richiesta fallita - {e}")
         return None
     return filename
 

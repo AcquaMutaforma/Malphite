@@ -9,6 +9,7 @@ Ovviamente i files già inseriti nel file CSV vengono ignorati, così da non sov
 Una volta elaborati
 """
 import mysite.Malphite.logManager as log
+
 cartella_files = "modPassiva/"
 
 

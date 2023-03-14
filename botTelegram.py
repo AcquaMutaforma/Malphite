@@ -75,7 +75,6 @@ application.add_handler(CommandHandler("help", help))
 application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
 application.run_polling(stop_signals=None)
 
-
 """ 
 import telegram
 

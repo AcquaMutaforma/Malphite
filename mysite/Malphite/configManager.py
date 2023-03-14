@@ -1,17 +1,19 @@
 import json
-import logManager as log
+from . import logManager as log
+
+pathConfig = "Malphite/config.txt"
 
 
 def __leggi_config() -> {}:
     # todo: inserire un controllo sulla correttezza dei dati
     try:
-        f = open("config.txt", 'r')
+        f = open(pathConfig, 'r')
         to_ret = json.load(f)
         f.close()
         return to_ret
     except FileNotFoundError:
         log.logError("Configurazione non trovata, generata la default")
-        f = open("config.txt", 'w')
+        f = open(pathConfig, 'w')
         default_config = {
             'api_key': '',
             'user_id': '',
@@ -26,7 +28,7 @@ CONFIG = __leggi_config()
 
 
 def scrivi_config():
-    f = open("config.txt", 'w')
+    f = open(pathConfig, 'w')
     f.write(json.dumps(CONFIG))
     f.close()
 

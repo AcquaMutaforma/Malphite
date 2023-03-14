@@ -2,7 +2,6 @@
 Modulo che gestisce l'input audio
 """
 import sounddevice as sd
-import file_handler
 import mysite.Malphite.logManager as log
 import numpy as np
 
@@ -31,9 +30,10 @@ def get_audio(duration=4.0) -> str:
 
 
 # old
+"""
 def __audio_to_file(recording):
-    """Trasforma una variabile audio in un file in memoria"""
-    return file_handler.audio_to_file(frequency, recording)
+    # Trasforma una variabile audio in un file in memoria
+    return file_handler.audio_to_file(frequency, recording)"""
 
 
 def get_audio_stream():

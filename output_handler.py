@@ -1,6 +1,6 @@
 import sounddevice as sd
-import file_handler
 import mysite.Malphite.logManager as log
+from mysite.Malphite import file_handler
 
 
 def riproduci_audio(nome_file: str):

@@ -1,6 +1,6 @@
 import sounddevice as sd
-import file_handler
-import logManager as log
+from . import file_handler
+from . import logManager as log
 
 
 def riproduci_audio(nome_file: str):
