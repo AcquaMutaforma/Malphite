@@ -7,8 +7,8 @@ import logging
 import datetime
 
 # 10=debug 20=info 30=warning 40=error 50=critical
-LIVELLO_OUTPUT = 20
-logFileName = 'logs/logfile' + datetime.datetime.now().strftime('_%d_%m_%y') + '.txt'
+LIVELLO_OUTPUT = 10
+logFileName = 'logsCGB/logfile' + datetime.datetime.now().strftime('_%d_%m_%y') + '.txt'
 
 logging.basicConfig(filename=logFileName, encoding='utf-8',
                     format='[[%(levelname)s]] - %(asctime)s - %(message)s',

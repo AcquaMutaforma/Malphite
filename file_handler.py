@@ -19,15 +19,15 @@ def audio_to_file(freq, recording):
         return 'None'
     try:
         sf.write(file=cartella_registrazioni + filename, samplerate=freq, data=recording)
-        print("[File_H] - File audio di richiesta creato correttamente")
+        log.logDebug("[File_H] - File audio di richiesta creato correttamente")
     except PermissionError:
-        print(f"[File_H] - Errore permessi scrittura file in ^ {cartella_registrazioni} ^")
+        log.logError(f"[File_H] - Errore permessi scrittura file in ^ {cartella_registrazioni} ^")
         return None
     except FileNotFoundError:
-        print(f"[File_H] - Errore file not found - {cartella_registrazioni} -or- {recording.__class__}")
+        log.logError(f"[File_H] - Errore file not found - {cartella_registrazioni} -or- {recording.__class__}")
         return None
     except Exception:
-        print("[File_H] - Errore indefinito - scrittura richiesta fallita :(")
+        log.logError("[File_H] - Errore indefinito - scrittura richiesta fallita :(")
         return None
     return filename
 
@@ -37,41 +37,11 @@ def elimina_audio(filename: str):
     di file audio delle risposte se necessario"""
     try:
         os.remove(filename)
-        print("[File_H] - Audio correttamente rimosso")
+        log.logDebug("[File_H] - Audio correttamente rimosso")
     except FileNotFoundError:
-        print(f"[File_H] - Audio da rimuovere non trovato ^{filename}")
+        log.logError(f"[File_H] - Audio da rimuovere non trovato ^{filename}")
     except PermissionError:
-        print(f"[File_H] - Errore permessi rimozione file audio ^ {filename} ^")
+        log.logError(f"[File_H] - Errore permessi rimozione file audio ^ {filename} ^")
     except Exception:
-        print("[File_H] - Errore indefinito - rimozione audio fallita :(")
+        log.logError("[File_H] - Errore indefinito - rimozione audio fallita :(")
 
-
-def apri_audio_risposta(nome_file: str):
-    """Recupera la registrazione di una risposta"""
-    try:
-        return sf.read(nome_file, dtype='float32')
-    except PermissionError:
-        print("[File_H] - Errore permessi per aprire file audio")
-    except FileNotFoundError:
-        print("[File_H] - File audio non trovato")
-    except Exception:
-        print("[File_H] - Errore indefinito in apertura audio :(")
-    return None
-
-
-# todo: delete, abbiamo cambiato metodo
-"""
-def add_audio_risposta(nuovo_nome: str, registrazione: str):
-    # SPOSTA una nuova registrazione nella cartella di risposte registrate dall'addetto
-    try:
-        destinazione = cartella_risposte + "/" + nuovo_nome
-        sorgente = os.fspath(registrazione)
-        os.replace(sorgente, destinazione)
-        print("[File_H] - Registrazione risposta aggiunta correttamente")
-    except PermissionError:
-        print("[File_H] - Errore permessi per aggiungere/modificare file audio")
-    except FileNotFoundError:
-        print("[File_H] - File registrazione non trovato")
-    except Exception:
-        print("[File_H] - Errore indefinito per aggiungere/modificare registrazione :(")
-"""

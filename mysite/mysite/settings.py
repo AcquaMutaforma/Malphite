@@ -56,7 +56,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(SETTINGS_PATH, '../Malphite/Templates')],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'Malphite/Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,5 +1,5 @@
 import json
-import mysite.Malphite.logManager as log
+import logManager as log
 
 pathConfig = "mysite/Malphite/config.txt"
 

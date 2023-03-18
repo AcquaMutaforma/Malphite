@@ -63,7 +63,7 @@ def modAttiva(model):
     while True:
         temporaneo = __get_registrazione(registratore=registratore)
         frase = model.stt(np.frombuffer(temporaneo, dtype=np.int16))
-        print(f"Frase compresa = [ {frase} ]")  # todo: rimuovere
+        print(f"Frase compresa = [ {frase} ]")
         # se non trovo una risposta, creo il file audio con il buffer temporaneo, lo invio insieme
         # alla traduzione all'addetto con il bot telegram
         log.logDebug(f"La frase compresa dal model è: {frase}")

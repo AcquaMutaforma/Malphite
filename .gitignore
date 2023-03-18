@@ -12,4 +12,6 @@ prove_aley/
 
 mysite/Malphite/migrations/
 
-logs/
+logsCGB/
+
+*.wav

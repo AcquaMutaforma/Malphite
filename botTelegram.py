@@ -58,29 +58,41 @@ async def echo(update: Update, context: CallbackContext) -> None:
     global application
     if __userValido(str(update.effective_user.id)):
         await update.message.reply_text("hey! ciao " + conf.get_userId())
+        try:
+            percorso = 'ricevutiTelegram/temporaneo.wav'
+            audio = update.message.audio
+            voice = update.message.voice
+            if audio is not None:
+                tmp = await audio.get_file()
+                path = await tmp.download(custom_path=percorso)
+                await update.message.reply_text(str(path))
+            elif voice is not None:
+                tmp = await voice.get_file()
+                path = await tmp.download(custom_path=percorso)
+                await update.message.reply_text(str(path))
+            else:
+                await update.message.reply_text("Non audio o voice")
+
+            #todo: re-inserire
+            # output_handler.riproduci_audio(tmp)
+            # fh.elimina_audio(tmp)
+        except Exception as e:
+            await update.message.reply_text(str(e))
     else:
         await update.message.reply_text("Non sei collegato :< --" + conf.get_userId())
-        try:
-            percorso = 'tmp.wav'
-            file = await application.Bot.get_file(update.message.audio.file_id)
-            await telegram.File.download(custom_path=percorso)
-            #file = await context.bot.get_file(update.message.voice.file_id)
-            # await file.download(custom_path=percorso)
-            #id_messaggio = await application.bot.get_updates().message.voice.file_id
-            # output_handler.riproduci_audio(percorso)
-            # fh.elimina_audio(percorso) todo: re-inserire
-        except RuntimeError:
-            pass
-        """Documentazione @ https://docs.python-telegram-bot.org/en/v20.0a4/telegram.file.html#telegram.File """
 
 
 async def audioh(update: Update, context: CallbackContext) -> None:
     global application
     if __userValido(str(update.effective_user.id)):
         await update.message.reply_text("collegato!")
+        percorso = 'ricevutiTelegram/'
+        file = await application.Bot.get_file(update.message.audio.file_id)
+        await telegram.File.download(file, custom_path=percorso)
+        """
         percorso = 'tmp.wav'
         file = await context.bot.get_file(update.message.voice.file_id)
-        await file.download(custom_path=percorso)
+        await file.download(custom_path=percorso)"""
     else:
         await update.message.reply_text("Non sei collegato :< --" + conf.get_userId())
 
@@ -97,9 +109,7 @@ application.add_handler(CommandHandler("myid", showid))
 application.add_handler(CommandHandler("help", help))
 application.add_handler(CommandHandler("richieste", richieste))
 
-application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
-application.add_handler(MessageHandler(filters.VOICE & ~filters.VOICE, audioh))
-application.add_handler(MessageHandler(filters.INVOICE & ~filters.INVOICE, audioh))
+application.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, echo))
 application.run_polling(stop_signals=None)
 
 """ 

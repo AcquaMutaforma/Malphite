@@ -1,11 +1,10 @@
 import json
 from . import logManager as log
 
-pathConfig = "config.txt"
+pathConfig = "Malphite/config.txt"
 
 
 def __leggi_config() -> {}:
-    # todo: inserire un controllo sulla correttezza dei dati
     try:
         f = open(pathConfig, 'r')
         to_ret = json.load(f)
