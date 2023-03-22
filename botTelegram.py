@@ -1,10 +1,11 @@
+import asyncio
+
 import telegram
 from telegram import Update, ForceReply
 from telegram.ext import CallbackContext, MessageHandler, filters, Application, CommandHandler
 
 import configRedirect as conf
-import mysite.Malphite.logManager as log
-import output_handler
+import logManager as log
 
 api_key = conf.get_apiKey()
 if api_key.__len__() < 8:
@@ -17,14 +18,19 @@ def __userValido(user: str) -> bool:
     return user == conf.get_userId()
 
 
-# TODO: non funziona
-async def invia_audio(filename: str, testo: str):
+def __inviaAudio(filename: str, testo: str):
+    asyncio.run(application.bot.send_message(chat_id=conf.get_userId(), text=testo))
+
+
+def invia_audio(filename: str, testo: str):
     global application
     user_id = conf.get_userId()
     if len(user_id) < 9:
         log.logError("ID utente Telegram < 9, errore di inserimento?")
         return
-    await telegram.Bot(api_key).sendMessage(chat_id=user_id, text="Richiesta non gestita")
+    __inviaAudio(filename, testo)
+
+    # telegram.Bot(api_key).sendMessage(chat_id=user_id, text="Richiesta non gestita")
     #await application.bot.sendMessage(chat_id=user_id, text="Richiesta non gestita")
     #await application.bot.send_audio(chat_id=user_id, audio=open(filename, 'rb'))
     #await application.bot.send_message(chat_id=user_id, text="Testo compreso: "+testo)
@@ -72,10 +78,6 @@ async def echo(update: Update, context: CallbackContext) -> None:
                 await update.message.reply_text(str(path))
             else:
                 await update.message.reply_text("Non audio o voice")
-
-            #todo: re-inserire
-            # output_handler.riproduci_audio(tmp)
-            # fh.elimina_audio(tmp)
         except Exception as e:
             await update.message.reply_text(str(e))
     else:

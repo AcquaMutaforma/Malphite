@@ -40,8 +40,9 @@ def sveglia_spenta():
 
 
 def modificaSveglia(orario: str):
-    global EVENTO_SVEGLIA
+    global EVENTO_SVEGLIA, ORARIO_SVEGLIA
     conf.set_orario_sveglia(orario)
+    ORARIO_SVEGLIA = orario
     tmp = __crea_sveglia(orario)
     if tmp is not None:
         EVENTO_SVEGLIA = tmp

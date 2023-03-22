@@ -1,12 +1,9 @@
-from django.forms import model_to_dict
 from django.shortcuts import render
 from django.shortcuts import redirect
 
 from . import sveglia
 from . import configManager as conf
 from . import forms
-from django.http import HttpResponse, JsonResponse
-#from rest_framework import status
 
 from .models import Risposta, Relazione, Keyword
 from . import funzioni

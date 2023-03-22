@@ -2,7 +2,8 @@
 Modulo che gestisce l'input audio
 """
 import sounddevice as sd
-import mysite.Malphite.logManager as log
+import logManager as log
+import file_handler
 import numpy as np
 
 """
@@ -20,20 +21,13 @@ soglia_y = 800  # soglia rumore, i valori più bassi non sono una persona che pa
 
 
 # old
-def get_audio(duration=4.0) -> str:
+def get_audio(duration=4.0, filename=None) -> str:
     recording = sd.rec(int(duration * frequency), dtype=np.int16)
     sd.wait()  # Wait for the audio to complete
     print(recording.dtype)
-    nome_file = __audio_to_file(recording=recording)
-    log.logInfo(str('registrato audio: ' + nome_file))
-    return nome_file
-
-
-# old
-"""
-def __audio_to_file(recording):
-    # Trasforma una variabile audio in un file in memoria
-    return file_handler.audio_to_file(frequency, recording)"""
+    fn = file_handler.audio_to_file(frequency, recording, filename=filename)
+    log.logInfo(str('registrato audio: ' + fn))
+    return fn
 
 
 def get_audio_stream():

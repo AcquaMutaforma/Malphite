@@ -8,7 +8,7 @@ audio registrato per inserire la sua traduzione manualmente nel file.
 Ovviamente i files già inseriti nel file CSV vengono ignorati, così da non sovrascriveli.
 Una volta elaborati
 """
-import mysite.Malphite.logManager as log
+import logManager as log
 
 cartella_files = "modPassiva/"
 

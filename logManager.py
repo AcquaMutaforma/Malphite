@@ -25,15 +25,15 @@ def logInfo(stringa: str):
 
 
 def logWarning(stringa: str):
-    print(str)
+    print(stringa)
     logging.warning(stringa)
 
 
 def logError(stringa: str):
-    print(str)
+    print(stringa)
     logging.error(stringa)
 
 
 def logCritical(stringa: str):
-    print(str)
+    print(stringa)
     logging.critical(stringa)

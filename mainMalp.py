@@ -1,8 +1,8 @@
 import registratore as rg
-import mysite.Malphite.logManager as log
-import mysite.Malphite.file_handler as fh
+import logManager as log
 import numpy as np
 import output_handler as out
+import file_handler as fh
 try:
     import botTelegram
 except Exception as e:
@@ -61,6 +61,7 @@ def modAttiva(model):
     registratore.start()
     log.logDebug("Inzio registrazione MOD ATTIVA")
     while True:
+        #riproduzioneProattiva()
         temporaneo = __get_registrazione(registratore=registratore)
         frase = model.stt(np.frombuffer(temporaneo, dtype=np.int16))
         print(f"Frase compresa = [ {frase} ]")
@@ -70,7 +71,7 @@ def modAttiva(model):
         if __decidere(frase):
             nome_file = fh.audio_to_file(rg.frequency, temporaneo)
             try:
-                botTelegram.invia_audio(nome_file, frase)
+                # botTelegram.invia_audio(nome_file, frase)
                 log.logInfo("\nRisposta non trovata. Domanda compresa = [" + frase + "]. File = [" +
                             nome_file + "]")
             except Exception:
@@ -130,10 +131,12 @@ def __decidere(frase: str):
         if len(x) < 3:
             continue
         key = rh.get_idrisposte_con_keyword(x)  # Richiesta al db locale
+        if key is None:
+            continue
         if key in lista_valutazione.keys():
             lista_valutazione[key] = lista_valutazione.get(key) + 1
         else:
-            lista_valutazione[key] = 1
+            lista_valutazione[key[0]] = 1
     # cerco l'id che compare piu volte
     idRisposta = 0
     massimo = 0
@@ -143,16 +146,16 @@ def __decidere(frase: str):
             idRisposta = k
             massimo = v
             unico = True
-        if massimo == v:
+        elif massimo == v:
             unico = False
 
     # Se ho trovato una risposta (il suo id) che compare una sola volta allora abbiamo una risposta, altrimenti
     # e' possibile che ci siano piu risposte valide o nessuna, non sapendo quale sia quella corretta mandiamo tutto
     # all'operatore tramite telegram
-    if unico and (idRisposta != 0):
+    if unico and (idRisposta != 0) and idRisposta is not None:
         # Riproduco audio risposta
         risposta = rh.get_risposta_by_idr(idrisposta=idRisposta)
-        out.riproduci_audio(str(risposta[2]) + "/" + str(risposta[1]))
+        out.riproduci_audio('mysite/' + str(risposta[2]))
         #  2 = percorso file, 1 = nome file
         return False  # Non serve mandare un messaggio telegram
     else:

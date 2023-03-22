@@ -1,5 +1,5 @@
 import psycopg2
-import mysite.Malphite.logManager as log
+import logManager as log
 
 dbname = 'postgres'
 user = 'postgres'
@@ -10,7 +10,8 @@ port = "5432"
 
 def get_risposta_by_idr(idrisposta: int):
     connessione = psycopg2.connect(dbname=dbname, user=user, password=password, host=host, port=port).cursor()
-    connessione.execute('SELECT * FROM "Malphite_risposta" WHERE idr=%s', str(idrisposta))
+    tmp = (idrisposta.__str__(), )
+    connessione.execute('SELECT * FROM "Malphite_risposta" WHERE idr=%s', (tmp,))
     try:
         return connessione.fetchone()
     except ConnectionError as e:
