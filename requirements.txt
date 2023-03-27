@@ -1,8 +1,8 @@
 django==4.1.4
 python-telegram-bot>=20.0a0
 soundfile
+sounddevice
 numpy
-schedule
 stt
-psycopg2
-playsound
+schedule
+psycopg2-binary

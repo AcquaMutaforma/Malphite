@@ -7,7 +7,7 @@ class Settings(models.Model):
 
 
 class Risposta(models.Model):
-    def __str__(self):  # Per i test questo metodo consente di visualizzare l'oggetto invece del suo id a runtime
+    def __str__(self):
         return self.nome
     idr = models.BigAutoField(primary_key=True)
     nome = models.CharField(max_length=150)
@@ -15,9 +15,7 @@ class Risposta(models.Model):
 
 
 class Keyword(models.Model):
-    # idRisposta = models.ForeignKey(Risposta, on_delete=models.CASCADE)
-    # Non sono sicuro di usare questo perche' ho piu risposte per ogni keyword
-    def __str__(self):  # Per i test questo metodo consente di visualizzare l'oggetto invece del suo id a runtime
+    def __str__(self):
         return self.keyword
     id = models.BigAutoField(primary_key=True)
     keyword = models.CharField(max_length=150)
