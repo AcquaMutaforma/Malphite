@@ -1,8 +1,6 @@
-import asyncio
-
 import telegram
 from telegram import Update, ForceReply
-from telegram.ext import CallbackContext, MessageHandler, filters, Application, CommandHandler
+from telegram.ext import CallbackContext, MessageHandler, filters, Application, CommandHandler, Updater
 
 import configRedirect as conf
 import logManager as log
@@ -18,23 +16,15 @@ def __userValido(user: str) -> bool:
     return user == conf.get_userId()
 
 
-def __inviaAudio(filename: str, testo: str):
-    asyncio.run(application.bot.send_message(chat_id=conf.get_userId(), text=testo))
-
-
-def invia_audio(filename: str, testo: str):
-    global application
+async def invia_audio(filename: str, testo: str):
     user_id = conf.get_userId()
     if len(user_id) < 9:
         log.logError("ID utente Telegram < 9, errore di inserimento?")
         return
-    __inviaAudio(filename, testo)
-
-    # telegram.Bot(api_key).sendMessage(chat_id=user_id, text="Richiesta non gestita")
-    #await application.bot.sendMessage(chat_id=user_id, text="Richiesta non gestita")
-    #await application.bot.send_audio(chat_id=user_id, audio=open(filename, 'rb'))
-    #await application.bot.send_message(chat_id=user_id, text="Testo compreso: "+testo)
-    log.logInfo(f"Inviato audio {filename} non gestito, testo compreso = {testo}")
+    b = telegram.Bot(api_key)
+    await b.send_message(chat_id=user_id, text=testo)
+    f = open(filename, 'rb')
+    await b.send_document(chat_id=user_id, document=f)
 
 
 async def start(update: Update, context: CallbackContext) -> None:
@@ -84,21 +74,6 @@ async def echo(update: Update, context: CallbackContext) -> None:
         await update.message.reply_text("Non sei collegato :< --" + conf.get_userId())
 
 
-async def audioh(update: Update, context: CallbackContext) -> None:
-    global application
-    if __userValido(str(update.effective_user.id)):
-        await update.message.reply_text("collegato!")
-        percorso = 'ricevutiTelegram/'
-        file = await application.Bot.get_file(update.message.audio.file_id)
-        await telegram.File.download(file, custom_path=percorso)
-        """
-        percorso = 'tmp.wav'
-        file = await context.bot.get_file(update.message.voice.file_id)
-        await file.download(custom_path=percorso)"""
-    else:
-        await update.message.reply_text("Non sei collegato :< --" + conf.get_userId())
-
-
 async def richieste(update: Update, context: CallbackContext) -> None:
     user = str(update.effective_user)
     if __userValido(user):
@@ -113,28 +88,3 @@ application.add_handler(CommandHandler("richieste", richieste))
 
 application.add_handler(MessageHandler(filters.ALL & ~filters.COMMAND, echo))
 application.run_polling(stop_signals=None)
-
-""" 
-import telegram
-
-from telegram.ext import Updater, CallbackContext, MessageHandler, Filters
-from telegram import Update
-
-
-def get_voice(update: Update, context: CallbackContext) -> None:
-    # get basic info about the voice note file and prepare it for downloading
-    new_file = context.bot.get_file(update.message.voice.file_id)
-    # download the voice note as a file
-    new_file.download(f"voice_note.ogg")
-
-
-def main():
-    api_key = ''
-    user_id = ''
-
-    updater = Updater("", use_context=True)
-    bot = telegram.Bot(token=api_key)
-
-    bot.sendAudio(chat_id=user_id, audio=open('TelegramBot\\brobob.mp3', 'rb'))
-
-"""

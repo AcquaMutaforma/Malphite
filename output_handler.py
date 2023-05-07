@@ -17,3 +17,7 @@ def riproduci_audio(nome_file: str):
 
 def suonaSveglia():
     riproduci_audio('sveglia.wav')
+
+
+def nonCapitoRipeti():
+    riproduci_audio('nonHoCapito.wav')

@@ -18,5 +18,9 @@ def addLineToCSV(filename: str, grandezza: int, frase: str):
         f = open(cartella_files + "lista.csv", 'a')
         tmp = filename + "," + str(grandezza) + "," + frase
         f.write(tmp + "\n")
+    except FileNotFoundError:
+        f = open(cartella_files + "lista.csv", 'w')
+        tmp = filename + "," + str(grandezza) + "," + frase
+        f.write(tmp + "\n")
     except Exception as e:
         log.logError(f"{e} - Impossibile modificare il file CSV")

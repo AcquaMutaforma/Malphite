@@ -29,12 +29,3 @@ def get_idrisposte_con_keyword(keyword: str) -> ():
         log.logError(f"[risposteHandler] - connessione DB - {e}")
     except Exception as e:
         log.logError(f"[risposteHandler] - connessione DB - {e}")
-
-
-"""
-INSERT INTO "Malphite_risposta" (idr, nome, "percorsoFile") VALUES (1,'test','/home/rasp/Desktop/')
-INSERT INTO "Malphite_keyword" (id, keyword) VALUES (1,'test')
-INSERT INTO "Malphite_keyword_idRisposta" (id, keyword_id, risposta_id) VALUES (1, 1, 1)
-
-SELECT idr FROM "Malphite_risposta" WHERE idr IN ( SELECT risposta_id FROM "Malphite_keyword_idRisposta" WHERE keyword_id IN ( SELECT id FROM "Malphite_keyword" WHERE keyword=%s))
-"""

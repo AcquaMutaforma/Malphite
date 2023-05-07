@@ -18,9 +18,11 @@ frequency = 16000  # Sampling frequency = frequenza campionamento
 sd.default.samplerate = frequency
 sd.default.channels = 1
 soglia_y = 800  # soglia rumore, i valori più bassi non sono una persona che parla
+'''TODO il valore cambia da dispositivo ad un'altro, e' consigliabile ricalibrarlo togliendo la parte commentata 
+nella mod passiva.'''
 
 
-# old
+# version 1
 def get_audio(duration=4.0, filename=None) -> str:
     recording = sd.rec(int(duration * frequency), dtype=np.int16)
     sd.wait()  # Wait for the audio to complete
